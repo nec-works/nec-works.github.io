@@ -1,0 +1,136 @@
+@charset "utf-8";
+/***** 이용가이드 *****/
+
+/* 2025-04-04 */
+
+.hidden_txt {position:absolute; top:0; left:0; overflow:hidden; width:0; height:0; color:transparent; visibility:hidden;}
+
+/* guide_intro_wrap */
+/* 2025-04-11 추가 */
+.guide_intro_wrap { width:100%; background:#f3f4f8;}
+.guide_intro_wrap .inner_wrap {margin-top:0; min-height:161px;}
+.guide_intro_wrap .guide_intro { background:url('https://mid.ebs.co.kr/images/middle/respond/sub/mo/guide_intro_bg_980.gif') no-repeat right;}
+.guide_intro_wrap h2{color:#3a4967;font-size:26px;padding:38px 0 5px 20px;font-weight:400; letter-spacing:-0.3px;}
+.guide_intro_wrap h2 span > em {font-weight:400;}
+.guide_intro_wrap h2 img {vertical-align:top;}
+.guide_intro_wrap p{font-size:16px;color:#444;padding-left:20px;line-height:22px; letter-spacing:-0.3px; .letter-spacing:-1px;/* IE7 */}
+.guide_intro_wrap p span.text03 {display:block;}
+/* //2025-04-11 추가 */
+
+.guide_intro_wrap.new2025 { width:100%; background:#e2fcff;}
+.guide_intro_wrap.new2025 .inner_wrap {margin-top:0;min-height: auto;}
+.guide_intro_wrap.new2025 .guide_intro > div{width:100%;text-align: center;}
+.guide_intro_wrap.new2025 .guide_intro > div > img{width: 100%;}
+
+/* guide_start_wrap */
+.guide_start_wrap {width:100%; background:#dee6f7;}
+.guide_start_wrap .inner_wrap {margin-top:0;}
+.guide_start_wrap img{width: 100%;}
+
+/* guide_reason_wrap */
+.guide_reason_wrap { width:100%; height:100%;}
+.guide_reason_wrap img{width: 100%;}
+.guide_reason_wrap a{display: block;font-size:0;text-indent: -9999px;position: absolute;background:none;cursor: pointer;}
+.guide_reason_wrap .inner_wrap {margin-top:0; min-height:100%;text-align:center;}
+.guide_reason_wrap .guide_reason01,
+.guide_reason_wrap .guide_reason03{background:#eff2f4;position: relative;}
+.guide_reason_wrap .guide_reason02,
+.guide_reason_wrap .guide_reason04{background:#dee6f7;position: relative;}
+.guide_reason_wrap .guide_reason05{background: rgb(185,175,255);background: linear-gradient(180deg, rgba(185,175,255,1) 0%, rgba(169,156,255,1) 28%, rgba(169,156,255,1) 61%, rgba(177,171,255,1) 100%);position: relative;}
+.guide_reason_wrap .link01{width: 49.5%;height:5%;top:43.3%;left: 25.2%;}
+.guide_reason_wrap .link02{width:8%;height:10%;bottom:18.3%;left:46%;}
+.guide_reason_wrap .link03{width:7%;height:7.5%;bottom:18.3%;left:46.6%;}
+.guide_reason_wrap .link04{width: 49.5%;height:16.3%;bottom:20%;left: 25.3%;}
+
+/* 2017-11-22 수정 */
+/* 서비스 */
+#Section_service.sub_service_guide .inner_wrap{margin: 18px auto 15px auto;min-height:auto}
+#Section_service.sub_service_guide .etc_service_wrap .bnr_wrap{margin-right:-10px}
+#Section_service.sub_service_guide .etc_service_wrap .bnr_wrap li{float:left; margin-right:10px;}
+#Section_service.sub_service_guide .etc_service_wrap .bnr_wrap li.list01{width:280px;}
+#Section_service.sub_service_guide .etc_service_wrap .bnr_wrap li.list01 a {width:100%;}
+#Section_service.sub_service_guide .etc_service_wrap .bnr_wrap li.list02{width:280px; display:none;}
+#Section_service.sub_service_guide .etc_service_wrap .bnr_wrap li.list02 a {width:100%;}
+#Section_service.sub_service_guide .etc_service_wrap .bnr_wrap li a { margin-right:0px;}
+/* 2017-11-22 수정 끝 */
+
+
+/* pc - wide 1280px ~ */
+@media all and (min-width:1280px){
+
+	/* 2017-11-22 수정 */
+	/* 서비스 */
+	#Section_service.sub_service_guide .etc_service_wrap .bnr_wrap{margin-right:-13px}
+	#Section_service.sub_service_guide .etc_service_wrap .bnr_wrap li {margin-right:13px}
+	#Section_service.sub_service_guide .etc_service_wrap .bnr_wrap li a{margin-right:0px}
+	#Section_service.sub_service_guide .etc_service_wrap .bnr_wrap li.list02{display:block;}
+	/* 2017-11-22 수정 끝 */
+
+	/* 2025-04-11 추가 */
+	/* guide_intro_wrap */
+	.guide_intro_wrap .inner_wrap {min-height:187px;}
+	.guide_intro_wrap .guide_intro { background:url('https://mid.ebs.co.kr/images/middle/respond/sub/guide_intro_bg.jpg') no-repeat right;}
+	.guide_intro_wrap h2{padding:38px 0 28px 45px;}
+	.guide_intro_wrap p{padding-left:45px;}
+	.guide_intro_wrap.new2025 { width:100%; background:#e2fcff;}
+	.guide_intro_wrap.new2025 .inner_wrap {margin-top:0;min-height: auto;}
+	.guide_intro_wrap.new2025 .inner_wrap.guide_intro{background:none;}
+	/* //2025-04-11 추가 */
+
+}
+	
+/* 모바일 태블릿 공통 */
+@media all and (max-width:979px){
+
+	/* 2025-04-11 추가 */
+	/* guide_intro_wrap */
+	.guide_intro_wrap.new2025 .inner_wrap {min-height:100%; margin:0px auto;}
+	.guide_intro_wrap.new2025 .guide_intro {padding:0;}
+
+	.guide_intro_wrap .inner_wrap {min-height:100%; margin-bottom:0px;}
+	.guide_intro_wrap .guide_intro { background:none; padding:60px 0 70px 45px;}
+	.guide_intro_wrap h2 {font-size:26px; padding:0px; margin-bottom:18px;}
+	.guide_intro_wrap p {padding-left:0px; }
+	.guide_intro_wrap p span {display:block;}
+	/* //2025-04-11 추가 */
+
+	/* guide_start_wrap */
+    .guide_start_wrap .inner_wrap{min-height:100%; margin:0px auto;}
+
+	/* guide_reason_wrap */
+    .guide_reason_wrap{margin-bottom: -40px;}
+	.guide_reason_wrap .inner_wrap {min-height:100%; margin:0px auto;}
+	.guide_reason_wrap .link01{width:62.5%;left:18.6%;}
+	.guide_reason_wrap .link04{width:62.4%;left:18.8%;}
+
+	.bnr_wr { display:none;}
+
+	/* 서비스 */
+	#Section_service.sub_service_guide .inner_wrap{margin:0px auto;}
+	#Section_service.sub_service_guide .service_list{margin:0}
+	
+}
+
+	
+/* mobile ~ 767px  */
+@media all and (max-width:767px){
+
+	.guide_intro_wrap .guide_intro { padding:50px 39px; }/* 2025-04-11 추가 */
+
+	/* 서비스 */
+    #Section_service.sub_service_guide .inner_wrap{margin:0 auto;}
+	#Section_service.course_guide_wr .service_list{border-top-color:#d8d7dc; border-bottom-color:#d8d7dc}
+	#Section_service.course_guide_wr .inner_wrap{margin:0px auto;}
+	#Section_service.course_guide_wr .service_list{margin:0}
+
+	
+}
+
+@media all and  (min-width: 979px){
+
+	.guide_intro_wrap .inner_wrap,
+	.guide_start_wrap .inner_wrap,
+	.guide_reason_wrap .inner_wrap{margin:0 auto;}
+}
+
+/* //2025-04-04 */
