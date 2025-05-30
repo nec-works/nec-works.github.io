@@ -1,2 +1,3 @@
 # nec-works.github.io
-works
+mid - 중학
+pri - 초등
