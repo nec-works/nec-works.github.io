@@ -1,0 +1,112 @@
+ html,
+ body {
+     font-size: 10px;
+     padding: 0;
+     margin: 0;
+     background: #fff;
+ }
+
+ body {
+     font-size: 1.5rem;
+ }
+
+ * {
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+     list-style: none;
+     color: black;
+ }
+
+ .pri,
+ .mid {
+     margin-bottom: 5rem;
+ }
+
+ a {
+     color: #50b9fe
+ }
+
+ .list-wrap {
+     padding: 1.5rem;
+ }
+
+ .list-wrap h1 {
+     font-size: 2.5rem;
+     margin: 0;
+ }
+
+ .list-wrap h2 {
+     font-size: 2rem;
+     padding: 0 0 .5rem 0;
+
+ }
+
+ .list-wrap .work-list {
+     margin: 0;
+     display: table;
+     width: 100%;
+     border-collapse: collapse;
+     border-bottom: .1rem solid #ccc;
+     color: #333;
+ }
+
+ .list-wrap .work-list dt,
+ .list-wrap .work-list dd {
+     display: table-cell;
+     padding: 1rem;
+     font-size: 1.5rem;
+ }
+
+ .list-wrap .work-list dt {
+     width: auto;
+     color: black;
+     width: 30%;
+ }
+
+ .list-wrap .work-list dd {
+     width: 28%;
+ }
+
+ .list-wrap .work-list dd :last-child {
+     width: 14%;
+ }
+
+ .list-wrap .work-list dt::before {
+     content: "-";
+     display: inline-block;
+     padding: 0 1rem 0 0;
+ }
+
+ .list-wrap .work-list dd::before {
+     content: "-";
+     display: inline-block;
+     padding: 0 1rem 0 0;
+ }
+
+ .list-wrap .memo {
+     border: 1px solid #ccc;
+     border-radius: .5rem;
+     padding: 1rem;
+     margin: 2rem auto;
+ }
+
+ .list-wrap .memo ul li {
+     text-indent: -.5rem;
+     padding-left: 2rem;
+ }
+
+ .list-wrap .memo ul li::before {
+     content: "-";
+     display: inline-block;
+     padding: 0 .5rem 0 0;
+ }
+
+ @media all and (max-width:980px) {
+
+     .list-wrap .work-list dt,
+     .list-wrap .work-list dd {
+         display: block;
+         width: 100%;
+     }
+ }
