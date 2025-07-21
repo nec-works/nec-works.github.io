@@ -10,6 +10,9 @@
      font-size: 1.5rem;
  }
 
+ strong{
+    color:brown;
+ }
  * {
      padding: 0;
      margin: 0;
@@ -18,15 +21,15 @@
      color: black;
  }
 
- .pri,
- .mid {
-     margin-bottom: 5rem;
- }
+ 
 
  a {
      color: #50b9fe
  }
-
+.list-wrap > div{
+     margin-bottom: 5rem;
+ }
+ 
  .list-wrap {
      padding: 1.5rem;
  }

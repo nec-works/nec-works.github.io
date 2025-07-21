@@ -1,0 +1,4137 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko">
+
+<head>
+	<meta name="decorator" content="sub" />
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="Content-Style-Type" content="text/css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="description" content="EBS 초등학교 학습강좌 사이트, 초등교과, 영어심화, 방학생활 등 강좌프로그램 제공.">
+	<meta name="keywords"
+		content="EBS, EBS초등, EBS초등프리미엄, 초등프리미엄, 과학, 국어, 사회, 선생님, 수학, 역사, 영어, 이비에스, 이비에스초등, 이비에스초등프리미엄, 이비에스교재, 프리패스, 초등프리패스, 초등프리미엄프리패스, 인터넷초등영어, 초등인강, 무료인강, 초등무료인강, 초등프리미엄인강, 초등프리미엄무료인강, 초등교재, 초등공부, 초등수학, 초등수학인강, 초등영어, 초등영어인강, 초등프리미엄교재, 초등프리미엄영어, 초등프리미엄학습, 초등인강순위, 초등인강추천, 초등인터넷강의, 초등인터넷강의추천, 초등인터넷학습, 초등학교강의, 초등학교인강, 초등교인터넷강의, 초등학생인강, 초등학생인터넷강의, 초등학습지, 초등학습지추천" />
+	<title>EBS 초등사이트</title>
+	<link type="text/css" rel="stylesheet"
+		href="https://primary.ebs.co.kr/css/primary/respond/resp_evt_lypop.css?v=20210216">
+	<!-- 초등 -->
+	<link type="text/css" rel="stylesheet"
+		href="https://primary.ebs.co.kr/css/primary/respond/swiper.min.css?v=2025061901" />
+	<link type="text/css" rel="stylesheet"
+		href="css/primary/respond/resp_common.css" />
+	<link type="text/css" rel="stylesheet"
+		href="https://primary.ebs.co.kr/css/primary/respond/resp_sub.css?v=2025061901" />
+	<!-- <link type="text/css" rel="stylesheet" href="https://primary.ebs.co.kr/css/primary/respond/jquery.mmenu.css" /> -->
+	<link type="text/css" rel="stylesheet" href="https://primary.ebs.co.kr/css/primary/respond/slick.css" />
+	<link type="text/css" rel="stylesheet"
+		href="https://primary.ebs.co.kr/css/primary/respond/layerpopup.css?v=20220617" />
+	<link rel="stylesheet" href="https://primary.ebs.co.kr/css/primary/respond/swiper-bundle.min.css?v=2025061901" />
+	<!--2024-11-25 초등 메인 리뉴얼 추가-->
+	<link rel="stylesheet" href="https://primary.ebs.co.kr/css/primary/respond/tablet_landscape.css?v=2025061901" />
+	<!--2024-11-25 초등 메인 리뉴얼 추가-->
+	<script type="text/javascript" src="https://primary.ebs.co.kr/js/respond/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="https://primary.ebs.co.kr/js/respond/resp_common.js?v=2025061901"></script>
+	<script type="text/javascript" src="js/respond/sub_main.js"></script><!-- 2025년 서브메인 리뉴얼 1차 : js추가됨 -->
+	<!-- <script type="text/javascript" src="https://primary.ebs.co.kr/js/respond/jquery.mmenu.min.js"></script> -->
+	<script type="text/javascript" src="https://primary.ebs.co.kr/js/respond/slick.min.js"></script>
+	<script type="text/javascript"
+		src="https://primary.ebs.co.kr/js/primary/respond/common-search-select.js?v=2022122802"></script>
+	<script type="text/javascript" src="https://primary.ebs.co.kr/js/respond/swiper.min.js?v=20210216"></script>
+	<script type="text/javascript" src="https://primary.ebs.co.kr/js/sdk/kakao.min.js"></script>
+	<script type="text/javascript" src="https://primary.ebs.co.kr/js/respond/layer_popup.js?v=20210216"></script>
+	<script type="text/javascript"
+		src="https://primary.ebs.co.kr/js/respond/swiper-bundle.min.js?v=2025061901"></script>
+	<script type="text/javascript"
+		src="https://primary.ebs.co.kr/js/respond/jquery.newsticker.js?v=2025061901"></script>
+
+	<link rel="shortcut icon" href="https://primary.ebs.co.kr/images/favicon_primary.ico" type="image/x-icon" />
+	<!-- // 초등 -->
+	<!-- 중학 -->
+	<!-- // 중학 -->
+	<script type="text/javascript" src="https://primary.ebs.co.kr/js/jaaulde-cookies.js"></script>
+	<script type="text/javascript" src="https://primary.ebs.co.kr/js/common.js?v=2025061901"></script>
+	<script type="text/javascript" src="https://primary.ebs.co.kr/js/mains/main-common.js?v=20210216"></script>
+	<script type="text/javascript" src="https://primary.ebs.co.kr/js/TLE.js"></script>
+</head>
+
+<body onload="login_fail(); checkMyRoom();" class="renewal">
+	<script>
+		function closeGoguryeoIntro() {
+			$('#goguryeo_layer').hide();
+		}
+	</script>
+	<div id="document">
+		<div id="goguryeo_layer" name="goguryeo_layer" class="pc_view" style="display: none;">
+			<div
+				style="display: block;z-index: 2530; height: auto;position:absolute;left:0;top:0;z-index:2520;width:100%;height:auto;min-width:1099px;overflow-x:hidden;overflow-y:auto;">
+				<div
+					style="width:900px;position:relative;overflow:hidden;z-index:100;height:auto;margin:0 auto;padding:100px 0 0;">
+					<div style="padding:40px 60px 50px;min-height:550px;background:#fff;*overflow:hidden;">
+						<center><img
+								src="https://primary.ebs.co.kr//static.ebs.co.kr/images/bhp/public/images/2019/03/14/13/43/58/62930098-9155-490e-8a0f-5f3e384eed9b.jpg"
+								alt="고구려"></center>
+					</div>
+					<a href="javascript:;" onclick="closeGoguryeoIntro();"
+						style="position:absolute;right:0;top:55px;overflow:hidden;width:30px;height:30px;padding-top:16px;background:url('../../../images/primary/respond/layer/btn_layerclose.png') no-repeat left top;z-index:110;text-indent:-9999px;">닫기</a>
+				</div>
+			</div>
+			<div
+				style="width: 1903px; height: 1606px; opacity: 0.7;display:block;position:absolute;left:0;top:0;z-index:2510;background-color:#000;">
+			</div>
+		</div>
+		<div id="skipnavigation">
+			<ul>
+				<li><a href="#contents_sub">본문 바로가기</a></li>
+				<li><a href="#gnb">주 메뉴 바로가기</a></li>
+			</ul>
+		</div>
+
+		<script type="text/javascript">
+			function openBannerTop(siteId, bannerPositionId, bnnrMngId, bnnrUrl, newWndwYn) {
+				if (siteId == "primary") bannerDelegateUrl = "/banner/primary/delegator?bnnrMngId=" + bnnrMngId + "&bnnrUrl=" + encodeURIComponent(bnnrUrl);
+				else bannerDelegateUrl = "/banner/middle/delegator?bnnrMngId=" + bnnrMngId + "&bnnrUrl=" + encodeURIComponent(bnnrUrl);
+				if (newWndwYn != "Y") {
+					location.href = bannerDelegateUrl;
+				} else {
+					window.open(bannerDelegateUrl, "_blank");
+				}
+			}
+		</script>
+
+		<!-- 탑배너 노출범위 분류 (positFixCd M = 메인만 노출 / A = 전체 노출 / N = 비노출  -->
+		<!-- 2023-06-29 중학 메인 노출 > 중학 프리미엄 메인 노출로 변경-->
+		<!-- 초/중학 분류 -->
+		<script>
+			function autoResize(i) {
+				var iframeHeight = screen.height;
+				if (screen.height > $(window).height() + 500) {
+					iframeHeight = $(window).height();
+				}
+			}
+		</script>
+		<script type="text/javascript">
+			function goLayer(iLayerNum, pageNo, srchPublCd, searchKeyword) {
+				var targetUrl = "";
+				var genData = "";
+				var YearClsfnIdArr = ['58000011', '58000012', '58000013', '21000012', '21000013', '21000014'];
+				/* var SubjClsfnIdArr = [
+						1001, 1002, 1003, // 국어, 영어, 수학
+						1004, 1005, 1006, // 사회, 과학, 역사
+						1007, 1015, 1016, // 도덕, 기술, 가정
+						1017, 1019, 1032 // 소프트웨어, 자기주도, 선택
+				]; */
+
+				var SubjClsfnIdArr = [
+					1001, 1002, 1003, // 국어, 영어, 수학
+					1028, 1005, 1030, // 사회, 과학, 역사
+					1026, 1024, 1022, // 도덕, 기술, 가정
+					1017, 1019, 1032 // 소프트웨어, 자기주도, 선택
+				];
+
+				var lYearClsfnId = null;
+				var lSubjClsfnId = null;
+				var lYear = $("#LIsYear").val();
+				var lSubj = $("#LIsSubject").val();
+
+				switch (lYear) {
+					case '1': lYearClsfnId = YearClsfnIdArr[0]; break;
+					case '2': lYearClsfnId = YearClsfnIdArr[1]; break;
+					case '3': lYearClsfnId = YearClsfnIdArr[2]; break;
+					case '4': lYearClsfnId = YearClsfnIdArr[3]; break;
+					case '5': lYearClsfnId = YearClsfnIdArr[4]; break;
+					case '6': lYearClsfnId = YearClsfnIdArr[5]; break;
+					default: lYearClsfnId = null;
+				}
+
+				switch (lSubj) {
+					case 'KOR': lSubjClsfnId = SubjClsfnIdArr[0]; break;
+					case 'ENG': lSubjClsfnId = SubjClsfnIdArr[1]; break;
+					case 'MAT': lSubjClsfnId = SubjClsfnIdArr[2]; break;
+					case 'SOC': lSubjClsfnId = SubjClsfnIdArr[3]; break;
+					case 'SCI': lSubjClsfnId = SubjClsfnIdArr[4]; break;
+					case 'HIS': lSubjClsfnId = SubjClsfnIdArr[5]; break;
+					case 'MOR': lSubjClsfnId = SubjClsfnIdArr[6]; break;
+					case 'TEC': lSubjClsfnId = SubjClsfnIdArr[7]; break;
+					case 'HOM': lSubjClsfnId = SubjClsfnIdArr[8]; break;
+					case 'SOF': lSubjClsfnId = SubjClsfnIdArr[9]; break;
+					case 'SEL': lSubjClsfnId = SubjClsfnIdArr[10]; break;
+					case 'CHO': lSubjClsfnId = SubjClsfnIdArr[11]; break;
+					default: lSubjClsfnId = null;
+				}
+
+				if (iLayerNum == "0") { targetUrl = "/eip/layerIntro/inner"; }
+				if (iLayerNum == "1") { targetUrl = "/eip/layer1/inner"; }
+				if (iLayerNum == "2") { targetUrl = "/eip/layer2/inner"; }
+				if (iLayerNum == "3") { targetUrl = "/eip/layer3/inner"; }
+				if (iLayerNum == "4") { targetUrl = "/eip/diag/list/inner"; }
+
+				if (iLayerNum != "0" && iLayerNum != "1") {
+					genData = "&lYear=" + lYear + "&lSubj=" + lSubj + "&lYearClsfnId=" + lYearClsfnId + "&lSubjClsfnId=" + lSubjClsfnId;
+
+					if (pageNo != null || pageNo != undefined) {
+						genData += "&pageNo=" + pageNo;
+					};
+
+					if (searchKeyword != null && searchKeyword != undefined && searchKeyword != "") {
+						genData += "&searchKeyword=" + searchKeyword;
+						srchPublCd = "all";
+					};
+
+					if (srchPublCd != null && srchPublCd != undefined && srchPublCd != "all") {
+						genData += "&searchrPublishCode=" + srchPublCd;
+					};
+				}
+
+				var argLength = arguments.length;
+
+				$.ajax({
+					url: targetUrl,
+					data: genData,
+					type: 'get',
+					dataType: 'html',
+					async: false,
+					success: function (obj) {
+						$("#DiagEvalArea").val(null);
+
+						if (argLength > 1) {
+							var chgFlagVal = $(".tab_recom li[class='on']").val();
+							$("#DiagEvalArea").val(chgFlagVal);
+						}
+
+						$("#DiagEvalArea").empty();
+						$("#DiagEvalArea").html(obj);
+
+						//CSS 재적용
+						$('#customModal').css({
+							'z-index': '2530',
+							'height': 'auto',
+							'display': 'block'
+						});
+
+
+						$('#customFade').css({ 'display': 'block' });
+
+
+						var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ? true : false;
+						if (isMobile) {
+							$(".layer_nav").children().first().hide();
+							$(".layer_nav").children().eq(1).css("width", "50%");
+							$(".layer_nav").children().eq(2).css("width", "50%");
+						}
+
+						$(".pm_list_wrap ul li a").removeClass("on");
+
+						if (srchPublCd == null || srchPublCd == undefined || srchPublCd == "all") {
+							$(".pm_list_wrap ul li[value=all] a").addClass("on")
+						} else {
+							$(".pm_list_wrap ul li[value=P" + srchPublCd + "] a").addClass("on");
+						}
+
+						if (searchKeyword != null && searchKeyword != undefined && searchKeyword != "") {
+							$(".search_input > label").text("");
+							$("#sch_check").val(searchKeyword);
+						}
+					}, error: function () { }
+				});
+
+			}
+
+			//학년 및 과목 선택시 레이어영역 컨트롤
+			var unslickFlag = false;
+
+			function jsLayerFormSetVal(sYear, sSubject) {
+				var sSelectedYear = $("#LIsYear").val();
+				var sSelectedSubject = $("#LIsSubject").val();
+
+				if (sSubject != '') {
+					$("#LIsYear").val(sSelectedYear);
+					$("#LIselected2Text").html(jsGetKorSubj(sSubject));
+					$("#LIselected2Text").attr('style', 'display:show');
+					$(".step3, .select_subject_area").hide();
+					unslickFlag = true;
+				} else {
+					$("#LIsYear").val(sYear);
+					setTimeout(function () {
+
+
+						//초등일때만 처리됨
+						createRecommandList();
+
+					}, 5);
+
+
+
+				}
+
+				$("#LIselectedText").html($("#LIsYear").val() + "학년");
+				$("#LIsSubject").val(sSubject);
+				$(".step1").hide();
+				$(".step2").show();
+				if (sSubject != '' && sSubject.length == 3) {
+					goLayer(3);
+				}
+			}
+
+			function jsGetKorSubj(sVal) {
+				sRtnVal = "";
+				switch (sVal) {
+					case 'KOR': sRtnVal = "국어"; break;
+					case 'MAT': sRtnVal = "수학"; break;
+					case 'SOC': sRtnVal = "사회"; break;
+					case 'HIS': sRtnVal = "역사"; break;
+					case 'SCI': sRtnVal = "과학"; break;
+					case 'ENG': sRtnVal = "영어"; break;
+					case 'MOR': sRtnVal = "도덕"; break;
+					case 'TEC': sRtnVal = "기술"; break;
+					case 'HOM': sRtnVal = "가정"; break;
+					case 'SOF': sRtnVal = "기타"; break;
+					case 'SEL': sRtnVal = "자기주도"; break;
+					case 'CHO': sRtnVal = "선택"; break;
+					case 'ALL': sRtnVal = "공통"; break;
+					default: sRtnVal = sVal; break;
+				}
+				return sRtnVal;
+			}
+
+			//강좌안내서(초등) 과목이동용 함수
+			function jsGetSubjNum(sVal) {
+				sRtnVal = "";
+				switch (sVal) {
+					case 'KOR': sRtnVal = "2"; break;
+					case 'MAT': sRtnVal = "3"; break;
+					case 'SOC': sRtnVal = "4"; break;
+					//case 'HIS' : sRtnVal = "역사"; break;
+					case 'SCI': sRtnVal = "5"; break;
+					case 'ENG': sRtnVal = "6"; break;
+					//case 'MOR' : sRtnVal = "도덕"; break;
+					//case 'ALL' : sRtnVal = "공통"; break;
+					//case 'SOF' : sRtnVal = "소프트웨어/기술/가정"; break;
+					default: sRtnVal = "1"; break;
+				}
+				return sRtnVal;
+			}
+
+			//탭메뉴 컨트롤
+			$(document).ready(function () {
+				var curUrl = document.location.toString();
+				if (curUrl.indexOf("#lp") > 0) {
+					$('.btn_notice, .btn_find_mylec').trigger('click');
+				}
+			});
+
+		</script>
+		<form id="LIForm" name="LIForm" method="post">
+			<input type="hidden" name="LIsYear" id="LIsYear" value="">
+			<input type="hidden" name="LIsSubject" id="LIsSubject" value="">
+		</form>
+		<!-- 문제은행용 영역 -->
+		<div id="ITEMPOOL_FRAME" name="ITEMPOOL_FRAME" style="display:none;">
+			<div id="imgLoading"
+				style="position:absolute; z-index:300;display:show;width:0px;height:44px; filter:alpha(opacity=50); opacity:50;">
+			</div>
+			<iframe title="공용 수식편집기" id="ItempoolFrame" name="ItempoolFrame" onload="autoResize(this)" width="100%"
+				height="100%" scrolling="auto" frameborder="0" class="iframeArea"></iframe>
+		</div>
+		<!-- 공용 수식편집기 영역 -->
+		<div id="mathEditPopDIV" name="mathEditPopDIV" style="position:absolute; z-index:3100; display:none;">
+			<iframe title="공용 수식편집기" id="mathEditPopIframe" name="mathEditPopIframe" frameborder="0"
+				allowTransparency="true" width="100%" height="100%"></iframe>
+		</div>
+
+		<script language="javascript" type="text/javascript"
+			src="https://primary.ebs.co.kr/ZoneMediaPlayer/html5player/js/mediaplayer_v1.1.41.js?v=2025061901"></script>
+		<script language="javascript" type="text/javascript"
+			src="https://primary.ebs.co.kr/js/player/vod_pleasure_layer.js?v=20160502"></script>
+		<script language="javascript" type="text/javascript"
+			src="https://primary.ebs.co.kr/js/player/vod_ajax.js?v=20210810"></script>
+		<div id="DiagEvalArea" name="DiagEvalArea" style="display:none;">
+			<script type="text/javascript">
+				function isMobile() {
+					var flag = false;
+					if (false) {
+						flag = true;
+					}
+					return flag;
+				}
+
+				//탭메뉴 컨트롤
+				$(document).ready(function () {
+					$('.layer_nav li').click(function () {
+						$(this).siblings().removeClass("on");
+						$(this).addClass("on");
+					});
+					var maskHeight = $('#document').height();
+					var maskWidth = $(window).width();
+
+					if (maskHeight < $('#customModal').height()) {
+						maskHeight = $('#customModal').height() + 71;
+					}
+					$('#customModal').addClass('on');
+					//마스크의 높이와 너비를 화면 것으로 만들어 전체 화면을 채운다.
+					$('#customFade').css({ 'width': maskWidth, 'height': maskHeight });
+
+					//애니메이션 효과
+					// $('#customFade').fadeIn(1000);      
+					$('#customFade').fadeTo(0, 0.7);
+
+					if (isMobile()) {
+						//goLayer('2');
+					}
+				});
+
+
+				function fnShowContents(courseId, courseNm) {
+					jsLayerFormSetVal('', courseNm);
+					$.ajax({
+						url: "/eip/layerIntroCourseView/inner",
+						data: { 'courseId': courseId },
+						dataType: "html",
+						type: "post",
+						async: true,
+						success: function (obj) {
+
+
+							$('#listView').html(obj);
+
+							//학년과목 세팅
+							$('span[name="LIselectedText"]').html($("#LIsYear").val() + "학년");
+							$('span[name="LIselected2Text"]').html(jsGetKorSubj($("#LIsSubject").val()));
+
+							$(".step2").hide();
+							$(".step3").show();
+						}, error: function (request, status, error) { alert("처리되지 못했습니다"); }
+					});
+				}
+
+				function playLayerInfo(p_obj) {
+					$.ajax({
+						type: 'POST',
+						url: '/course/toastPlayer',
+						data: {
+							'playType': p_obj.type,
+							'courseId': p_obj.courseId,
+							'lectureId': p_obj.lectureId,
+							'indexSno': p_obj.indexSno,
+							'clipId': p_obj.clipId
+						},
+						dataType: 'json',
+						success: function (data) {
+							if (data.result == "failure") {
+								alert(data.exceptionMessage);
+							} else {
+								if (isEmpty(data.vodUrl)) {
+									alert('강의가 탑재될 예정입니다.');
+									return false;
+								}
+
+								// 기본 토스트 팝업 생성 함수 ( for SilverLight )
+								playLayer_makeHTML(data);
+							}
+						}
+					});
+				}
+
+				function isNotEmpty(_str) {
+					obj = String(_str);
+					if (obj == null || obj == undefined || obj == 'null' || obj == 'undefined' || obj == '')
+						return false;
+					else
+						return true;
+				}
+
+				function isEmpty(_str) {
+					return !isNotEmpty(_str);
+				}
+
+				function playLayer_makeHTML(p_data) {
+					g_arVOD[0] = p_data.vodUrl;
+					GenKey();
+					if (isNotEmpty(p_data.courseImgSrc11)) {
+						g_courseImgSrc11 = 'http://' + p_data.imagePath + p_data.courseImgSrc11;
+					}
+
+					var viewType = "type1";
+					var linkUrl = "/course/view?courseId=" + p_data.courseId;
+					var title = p_data.courseNm;
+					var thumbSrc = 'http://' + p_data.imagePath + p_data.courseImgSrc2;
+					var data_1 = p_data.teacherNm + " 선생님";
+					var data_2 = p_data.stdyPhsCdNm;
+					var data_3 = p_data.txbkNm || "교재없음";
+					var data_4 = p_data.courseFeat;
+					var data_5 = "| " + p_data.teacherNm + " 선생님";
+
+					$("#title2").text(title); //제목
+					$("#info1").text(data_1);//선생님
+					$("#info2").text(data_2);//학습단계
+					$("#info3").text(data_3);//강의교재
+					$("#info4").text(data_4);//강좌설명
+					$(".cont_wrap .thumb img").attr("src", thumbSrc);//이미지
+
+					viewType = "type2";
+					$(".toast_preview_layer_wrap." + viewType).find('.cont_wrap table td:eq(3) div').attr('title2', data_4.replace(/<(\/)?([a-zA-Z]*)(\s[a-zA-Z]*=[^>]*)?(\s)*(\/)?>/ig, "")).html(data_4);
+
+					$("#btnInfo2").attr("href", linkUrl); //강좌보기
+					$("#mylec_preview_layer_wrap").show();
+
+
+					$('#course_play_area_LAYER').empty();
+					$('#course_play_area_LAYER').append('<video id="courseViewHTML5Player"></video>');
+					var video = document.getElementById('courseViewHTML5Player');
+
+					playerDefaultCfg.sources[0].src = g_arVOD[0];
+					mediaplayer.createVODPlayer(video, playerDefaultCfg, function () { });
+
+					// 학습신청 버튼
+					if (p_data.enrolSteCd == '100' || p_data.enrolSteCd == '200' || p_data.enrolSteCd == '201') {
+						$(".mylec_preview_layer .cont_wrap p.btn a:eq(0)").unbind().click(function () {
+							checkLect(p_data.courseId);
+						}).text("학습중");
+					} else {
+						$(".mylec_preview_layer .cont_wrap p.btn a:eq(0)").unbind().click(function () {
+							goMyStudyRoomLayer(p_data.courseId, p_data.enrolSteCd);
+						}).text("학습신청");
+					}
+
+					// 강좌보기 버튼
+					$(".mylec_preview_layer .cont_wrap p.btn a:eq(1)").attr('href', linkUrl);
+
+					// 교재구입 버튼
+					if (isEmpty(p_data.txbkPurchaseUrl)) {
+						$(".mylec_preview_layer .cont_wrap p.btn a:eq(2)").unbind().hide();
+					} else {
+						$(".mylec_preview_layer .cont_wrap p.btn a:eq(2)").unbind().click(function () {
+							goRurl('', p_data.courseId, p_data.txbkPurchaseUrl);
+						}).show();
+					}
+				}
+			</script>
+
+
+			<div id="customModal">
+				<div class="modalView">
+					<div class="layer_main">
+						<h3>
+							<img src="https://primary.ebs.co.kr/images/primary/respond/layer/h3_logo.png"
+								alt="EBS 초등 내게 맞는 강좌 찾기" class="pc_view">
+							<img src="https://primary.ebs.co.kr/images/primary/respond/layer/h3_logo_m.png"
+								alt="내게 맞는 강좌 찾기" class="mob_view">
+						</h3>
+
+						<!-- 1단계 -->
+						<div class="select_grade_area step1">
+							<p class="select_txt"><strong>학년</strong>을 선택해 주세요</p>
+							<div class="select_grade">
+								<span class="low">
+									<a href="#none" onClick="jsLayerFormSetVal('1','');"
+										class="btn_grade"><strong>1</strong>학년</a>
+									<a href="#none" onClick="jsLayerFormSetVal('2','');"
+										class="btn_grade"><strong>2</strong>학년</a>
+									<a href="#none" onClick="jsLayerFormSetVal('3','');"
+										class="btn_grade"><strong>3</strong>학년</a>
+								</span>
+								<a href="#none" onClick="jsLayerFormSetVal('4','');"
+									class="btn_grade"><strong>4</strong>학년</a>
+								<a href="#none" onClick="jsLayerFormSetVal('5','');"
+									class="btn_grade"><strong>5</strong>학년</a>
+								<a href="#none" onClick="jsLayerFormSetVal('6','');"
+									class="btn_grade"><strong>6</strong>학년</a>
+							</div>
+						</div>
+						<!-- //1단계 -->
+
+						<!-- 2단계 -->
+						<div class="step2" style="display:none;">
+							<div class="select_item">
+								<strong class="selections">선택항목</strong>
+								<span class="selections_items" id="LIselectedText"></span>
+								<span class="selections_items" id="LIselected2Text" style="display:none;"></span>
+								<a href="#none" class="btn_reset"><span class="pc_view">선택 초기화</span></a>
+							</div>
+							<div class="select_subject_area">
+								<div class="subject_top">
+									<p class="select_txt"><strong>과목</strong>을 선택해 주세요</p>
+									<div class="select_subject">
+										<span class="top">
+											<a href="#none" onClick="jsLayerFormSetVal('','KOR');"
+												class="btn_subject">국어</a>
+											<a href="#none" onClick="jsLayerFormSetVal('','MAT');"
+												class="btn_subject">수학</a>
+											<a href="#none" onClick="jsLayerFormSetVal('','SOC');"
+												class="btn_subject">사회</a>
+										</span>
+										<a href="#none" onClick="jsLayerFormSetVal('','SCI');"
+											class="btn_subject">과학</a>
+										<a href="#none" onClick="jsLayerFormSetVal('','ENG');"
+											class="btn_subject">영어</a>
+										<a href="#none" onClick="jsLayerFormSetVal('','ALL');"
+											class="btn_subject">공통</a>
+									</div>
+								</div>
+								<div class="subject_bottom">
+									<p class="select_txt"><strong class="creative">창의체험</strong> 추천 콘텐츠</p>
+									<div class="creative_subject">
+										<div class="list_box">
+											<div class="list_creative slick_layerPop_main">
+												<div class="item_box">
+													<a href="https://primary.ebs.co.kr/CPG/course/view?courseId=10202560"
+														title="역사가 술술">
+														<span class="photo">
+															<img src="https://cbox.ebs.co.kr/course/2019/10/8/10202560/68254757399206902_course.jpg"
+																alt="역사가 술술" />
+														</span>
+														<span class="txt_infor">
+															<strong class="tit">역사가 술술</strong>
+														</span>
+													</a>
+												</div>
+												<div class="item_box">
+													<a href="https://primary.ebs.co.kr/CPG/course/view?courseId=10033013"
+														title="엉뚱 남매 공작소">
+														<span class="photo">
+															<img src="https://cbox.ebs.co.kr/course/2018/10/10/10033013/39243646365133150_course.jpg"
+																alt="엉뚱 남매 공작소" />
+														</span>
+														<span class="txt_infor">
+															<strong class="tit">엉뚱 남매 공작소</strong>
+														</span>
+													</a>
+												</div>
+												<div class="item_box">
+													<a href="https://primary.ebs.co.kr/CPG/course/view?courseId=10034553"
+														title="엉뚱 남매 요리조리쇼">
+														<span class="photo">
+															<img src="https://cbox.ebs.co.kr/course/2019/4/29/10034553/54235033375808606_course.jpg"
+																alt="엉뚱 남매 요리조리쇼" />
+														</span>
+														<span class="txt_infor">
+															<strong class="tit">엉뚱 남매 요리조리쇼</strong>
+														</span>
+													</a>
+												</div>
+												<div class="item_box">
+													<a href="https://primary.ebs.co.kr/CPG/course/view?courseId=10001543"
+														title="천하무적 한자 900">
+														<span class="photo">
+															<img src="https://cbox.ebs.co.kr/course/2014/12/1/thumb11/20120323_090386_d.jpg"
+																alt="천하무적 한자 900" />
+														</span>
+														<span class="txt_infor">
+															<strong class="tit">천하무적 한자 900</strong>
+														</span>
+													</a>
+												</div>
+												<div class="item_box">
+													<a href="https://primary.ebs.co.kr/CPG/course/view?courseId=10033014"
+														title="과학할고양">
+														<span class="photo">
+															<img src="https://cbox.ebs.co.kr/course/2018/10/10/10033014/38703119963972090_course.gif"
+																alt="과학할고양" />
+														</span>
+														<span class="txt_infor">
+															<strong class="tit">과학할고양</strong>
+														</span>
+													</a>
+												</div>
+												<div class="item_box">
+													<a href="https://primary.ebs.co.kr/CPG/course/view?courseId=10016152"
+														title="어휘랑! 교과서 한자어를 찾아라!">
+														<span class="photo">
+															<img src="https://cbox.ebs.co.kr/course/2016/12/19/10016152/10016152.jpg"
+																alt="어휘랑! 교과서 한자어를 찾아라!" />
+														</span>
+														<span class="txt_infor">
+															<strong class="tit">어휘랑! 교과서 한자어를 찾아라!</strong>
+														</span>
+													</a>
+												</div>
+												<div class="item_box">
+													<a href="https://primary.ebs.co.kr/CPG/course/view?courseId=10018974"
+														title="스쿨랜드 - 사자성어">
+														<span class="photo">
+															<img src="https://cbox.ebs.co.kr/course/2016/12/19/10018974/10018974.jpg"
+																alt="스쿨랜드 - 사자성어" />
+														</span>
+														<span class="txt_infor">
+															<strong class="tit">스쿨랜드 - 사자성어</strong>
+														</span>
+													</a>
+												</div>
+												<div class="item_box">
+													<a href="https://primary.ebs.co.kr/CPG/course/view?courseId=10200890"
+														title="야옹! 클래식">
+														<span class="photo">
+															<img src="https://cbox.ebs.co.kr/course/2019/7/1/10200890/59696414803478495_course.jpg"
+																alt="야옹! 클래식" />
+														</span>
+														<span class="txt_infor">
+															<strong class="tit">야옹! 클래식</strong>
+														</span>
+													</a>
+												</div>
+												<div class="item_box">
+													<a href="https://primary.ebs.co.kr/CPG/course/view?courseId=10022923"
+														title="어휘랑! 교과서 한자어를 찾아라! 2">
+														<span class="photo">
+															<img src="https://cbox.ebs.co.kr/course/2016/12/19/10022923/10022923.jpg"
+																alt="어휘랑! 교과서 한자어를 찾아라! 2" />
+														</span>
+														<span class="txt_infor">
+															<strong class="tit">어휘랑! 교과서 한자어를 찾아라! 2</strong>
+														</span>
+													</a>
+												</div>
+												<div class="item_box">
+													<a href="https://primary.ebs.co.kr/CPG/course/view?courseId=10019195"
+														title="오 마이 미래 2035 - 신(新) 극한직업">
+														<span class="photo">
+															<img src="https://cbox.ebs.co.kr/course/2016/12/19/10019195/10019195.jpg"
+																alt="오 마이 미래 2035 - 신(新) 극한직업" />
+														</span>
+														<span class="txt_infor">
+															<strong class="tit">오 마이 미래 2035 - 신(新) 극한직업</strong>
+														</span>
+													</a>
+												</div>
+												<div class="item_box">
+													<a href="https://primary.ebs.co.kr/CPG/course/view?courseId=10016726"
+														title="사이틴 시즌3 - 왔다! 사춘기">
+														<span class="photo">
+															<img src="https://cbox.ebs.co.kr/course/2016/12/19/10016726/10016726.jpg"
+																alt="사이틴 시즌3 - 왔다! 사춘기" />
+														</span>
+														<span class="txt_infor">
+															<strong class="tit">사이틴 시즌3 - 왔다! 사춘기</strong>
+														</span>
+													</a>
+												</div>
+												<div class="item_box">
+													<a href="https://primary.ebs.co.kr/CPG/course/view?courseId=10005917"
+														title="스쿨랜드 - 과학">
+														<span class="photo">
+															<img src="https://cbox.ebs.co.kr/course/2018/10/11/10005917/38799401607412753_course.jpg"
+																alt="스쿨랜드 - 과학" />
+														</span>
+														<span class="txt_infor">
+															<strong class="tit">스쿨랜드 - 과학</strong>
+														</span>
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- //2단계 -->
+
+						<!-- 3단계 -->
+						<div id="listView">
+							<!-- 3단계 -->
+							<!-- //3단계 -->
+						</div>
+
+
+					</div>
+					<a href="#none" class="layer_close">닫기</a>
+				</div>
+				<!-- //modalView -->
+			</div>
+			<!-- //customModal -->
+
+			<!-- toast layer -->
+			<div id="mylec_preview_layer_wrap">
+				<div class="mylec_preview_layer">
+					<div class="view_area" id="course_play_area_LAYER">
+						<div class="playerDiv" style="width: 100%; height: 100%"></div>
+					</div>
+					<div class="cont_wrap">
+						<p class="tit">
+							<a href="#" id="title2">수학의 자신감 5-2</a>
+						</p>
+						<a href="#" class="thumb"><img
+								src="https://primary.ebs.co.kr/images/primary/respond/layer/img_lecture.jpg"
+								alt="강좌 썸네일" /></a>
+						<table summary="강좌 상세정보">
+							<caption>강좌 상세정보</caption>
+							<colgroup>
+								<col style="width:60px;">
+								<col style="width:*;">
+							</colgroup>
+							<tbody>
+								<tr class="first">
+									<th scope="row">선생님</th>
+									<td>
+										<div class="t_wrap" id="info1">김소리선생님</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">학습단계</th>
+									<td>
+										<div class="t_wrap" id="info2">교과보충학습</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">강의교재</th>
+									<td>
+										<div class="t_wrap" id="info3">EBS 수학의 자신감 5-2 (2016)</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">강좌설명</th>
+									<td id="info4">
+										<div class="explain_lec">여러분의 수학 자신감이 대폭발할 그날까지!
+											여러분의 수학 자신감 충전을 도와드립니다.
+											확실한 개념이해를 바탕으로 다양한 문제 유</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<p class="btn">
+							<a href="#none" class="btn_pop_gray" id="btnInfo1">학습신청</a>
+							<a href="#none" class="btn_pop_gray" id="btnInfo2">강좌보기</a>
+							<a href="#none" class="btn_pop_gray" id="btnInfo3">교재구입</a>
+						</p>
+					</div>
+					<a href="#none" class="preview_close">닫기</a>
+					<div id="none" style="display:none;"></div>
+				</div>
+			</div>
+			<!-- //toast layer -->
+			<div id="customFade"></div>
+
+
+		</div>
+
+
+		<div id="DiagEvalArea" name="DiagEvalArea" style="display:none;">
+		</div>
+		<!-- 2020-06-09 온라인 클래스 배너 추가 시작 : 위치는 #header 상단 -->
+
+		<!-- //2020-06-09 온라인 클래스 배너 추가 끝-->
+		<!-- header start // -->
+		<div id="header">
+			<script type="text/javascript"
+				src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+			<!-- 한국사 즉문즉답 추가 -->
+			<script type="text/javascript"
+				src="https://primary.ebs.co.kr/js/middle/respond/commonFAQModal.js?v=20210422"></script>
+			<!-- 2022-03-29 AI 데이터 이벤트 수신 -->
+			<script type="text/javascript" src="https://primary.ebs.co.kr/js/mains/timestamp.js?v=2023050805"></script>
+			<!-- /2022-03-29 AI 데이터 이벤트 수신 -->
+			<script type="text/javascript">
+
+
+
+				/*
+				 * 로그인 상태 확인
+				 */
+				function login_check_return(url) {
+					if (isLogin()) {
+						location.href = url;
+					}
+					else {
+						if (confirm("로그인 후 이용하실 수 있습니다.")) {
+							LoginFocus(url.indexOf('http') > -1 ? url : document.location.protocol + "//" + document.location.host + url);
+						}
+					}
+				}
+
+				function login_check() {
+					if (!isLogin()) {
+						if (confirm("로그인 후 이용하실 수 있습니다.")) {
+							LoginFocus();
+						}
+						return false;
+					} else {
+						return true;
+					}
+				}
+
+				function isLogin() {
+					if ('' != '') {
+						return true;
+					}
+					else {
+						return false;
+					}
+				}
+
+				function login_fail(status) {
+					if (status == "0") {
+						alert("아이디 또는 비밀번호가 잘못되었습니다.\n다시 시도하여 주세요.");
+						LoginFocus();
+					} else if (status == "1") {
+						alert("장기 미이용자로서 관련 법규에 의거 탈퇴 처리되었으며,\n고객님의 개인정보는 모두 삭제 처리되었음을 알려드립니다.\n새로운 아이디로 재가입하여 이용해주시기 바랍니다.");
+					} else if (status == "2") {
+						alert("현재 신규 SNS 가입이 제한되었습니다.\nEBS 회원가입을 이용해 주시기 바랍니다.");
+					}
+				}
+
+				/*
+				 * 로컬_로그인_여부(N:SSO로그인, Y:로컬로그인, S:로컬로그인-회원가입가능)
+				 */
+				function _localMode() {
+					var localMode;
+					$.ajax({
+						url: '//primary.ebs.co.kr/sso/checkLocalmode',
+						type: 'POST',
+						async: false,
+						dataType: 'text',
+						success: function (data) {
+							localMode = data;
+						},
+						error: function () {
+							localMode = 'N';
+						}
+					});
+					return localMode;
+				}
+
+				/*
+				 * 로컬 로그인 모드 세팅
+				 * header
+				 */
+				function setLocalLoginMode() {
+					/* 		if(_localMode() != 'N') {
+								$('#c').val('LI');
+								$('#head_login').attr('action', (location.host.indexOf('mid')==0||location.host.indexOf('primary')==0?'https':'http')+'://primary.ebs.co.kr/sso/login');
+					} */
+				}
+
+				/**
+				 * 회원 가입.
+				 */
+				function _userJoin() {
+					if (_localMode() == 'Y') {
+						alert('서비스 일시 중지중입니다.\n긴급 네트워크 증설 및 보안 개선 작업으로 인해\n현재 신규 회원가입과 회원정보수정/탈퇴 기능이 잠시 중단됩니다.\n\n작업이 완료되는 즉시 서비스 될 수 있도록 하겠습니다.');
+						return;
+					}
+					else {
+
+						window.open('https://sso.ebs.co.kr/join/intro?returnUrl=' + encodeURIComponent('https://primary.ebs.co.kr/CPG/primary/index?click=main_gnb1') + '&issuerName=' + encodeURIComponent('primary.ebs.co.kr') + '&fi=' + encodeURIComponent('https://primary.ebs.co.kr/mypage/userInfo/index'));
+
+					}
+				}
+
+				/**
+				 * 아이디 찾기.
+				 */
+				function _idFind() {
+					if (_localMode() == 'Y') {
+						alert('서비스 일시 중지중입니다.\n긴급 네트워크 증설 및 보안 개선 작업으로 인해\n현재 신규 회원가입과 회원정보수정/탈퇴 기능이 잠시 중단됩니다.\n\n작업이 완료되는 즉시 서비스 될 수 있도록 하겠습니다.');
+						return;
+					}
+					else {
+
+						window.open('https://sso.ebs.co.kr/user/find/id?returnUrl=' + encodeURIComponent('https://primary.ebs.co.kr/CPG/primary/index?click=main_gnb1') + '&issuerName=' + encodeURIComponent('primary.ebs.co.kr') + '&fi=' + encodeURIComponent('https://primary.ebs.co.kr/mypage/userInfo/index'));
+
+					}
+				}
+
+				/**
+				 * 비밀번호 찾기.
+				 */
+				function _pwdFind() {
+					if (_localMode() == 'Y') {
+						alert('서비스 일시 중지중입니다.\n긴급 네트워크 증설 및 보안 개선 작업으로 인해\n현재 신규 회원가입과 회원정보수정/탈퇴 기능이 잠시 중단됩니다.\n\n작업이 완료되는 즉시 서비스 될 수 있도록 하겠습니다.');
+						return;
+					}
+					else {
+
+						window.open('https://sso.ebs.co.kr/user/reissue/password?returnUrl=https://primary.ebs.co.kr/CPG/primary/index?click=main_gnb1');
+
+					}
+				}
+
+				/**
+				 * 회원정보 수정.
+				 */
+				function userModify() {
+					location.href = "/mypage/userInfo/index";
+				}
+
+				/**
+				 * 내강좌 바로가기
+				 */
+				function myLectureAndOpenRecentPleasure(myLectureVar, openRecentPleasureVar) {
+					var studyFlag = getUserStudyFlag(openRecentPleasureVar);
+
+
+					if (studyFlag == "Y" && studyFlag !== undefined) {
+						alert('해당 강좌는 8월 31일(수)까지만 EBS초등 사이트에서 수강 가능합니다.\nEBS중학 사이트에서 수강 가능하니 학습 시 참고하여 주세요.');
+					}
+					openRecentPleasure(openRecentPleasureVar);
+					myLecture(myLectureVar);
+
+
+				}
+				function myLecture(value) {
+					if (value != "") {
+						var values = value.split("|");
+						if (values[0] == "PR") {
+							location.href = "/premium/course/forwardProduct?courseId=" + values[1] + "&stepId=" + values[2];
+						} else {
+							goStudy(values[1]);
+						}
+					}
+				}
+
+				/**
+				 * 통합검색 영역 시작.
+				 */
+				function goPrimaryMainSearch() {
+
+					var search = $("#search2").val();
+					if (null == search || 0 >= search.length) {
+						alert("검색어를 입력하세요.");
+						$("#search2").focus();
+					} else {
+
+						var isChatBot = false;
+						var chatBotSearch = search.replace("-", "");
+						chatBotSearch = $.trim(chatBotSearch);
+						var chkStyle = /[0-9]{8,10}$/;
+						if (chkStyle.test(chatBotSearch)) {
+							isChatBot = true;
+						}
+
+						if (isChatBot) {
+							$("#child-iframe").attr("src", "https://aibot.ebs.co.kr/pri?in_str=" + chatBotSearch);
+							openChatbot();
+						} else {
+							var frm = document._searchFrm;
+							frm.action = "/search/index#all/" + search
+							frm.submit();
+						}
+					}
+				}
+
+				function initIds() {
+					var id = cookies.get('id');
+					if (id != null) {
+						document._login.savedcheck.checked = true;
+						document._login.j_username.focus();
+						document._login.j_username.blur();
+						document._login.j_username.value = id;
+					}
+				}
+
+				//키워드 자동완성 이벤트(헤더)
+				$(document).ready(function () {
+					var apiSeachURL = '/search/apiAutoKeyWordAjax';
+
+					$("input[name='q'][id='search2']").click(function () {
+						var managerUrl = "";
+						arkDisplayInitMain();
+						if ($(this).val() != "") {
+							$.ajax({
+								type: 'post',
+								dataType: 'json',
+								url: apiSeachURL,
+								data: {
+									'search': $.trim($(this).val())
+								},
+								success: function (obj) {
+									arkResponseParseMain(obj);
+								},
+								error: function (request, status, error) {
+									console.log("code:" + request.status + "\n" + "message:" + request.responseText + "\n" + "error:" + error);
+								}
+							});
+						}
+					});
+
+
+					//키워드 자동완성 이벤트(헤더)
+					$("input[name='q'][id='search2']").keyup(function (e) {
+						var key = e.which;
+						var direction = "";
+						switch (key) {
+							case 38:
+								direction = "up";
+								break;
+							case 37:
+								direction = "left";
+								break;
+							case 39:
+								direction = "right";
+								break;
+							case 40:
+								direction = "down";
+								break;
+							default:
+								direction = "none";
+								break;
+						}
+
+						if (direction == "none" && $(this).val() != "") {
+							var managerUrl = "";
+
+							arkDisplayInitMain();
+							$.ajax({
+								type: 'post',
+								dataType: 'json',
+								url: apiSeachURL,
+								data: {
+									'search': $.trim($(this).val())
+								},
+								success: function (obj) {
+									arkItemIdx = -1;
+									arkResponseParseMain(obj);
+								},
+								error: function (request, status, error) {
+									console.log("code:" + request.status + "\n" + "message:" + request.responseText + "\n" + "error:" + error);
+								}
+							});
+						} else if (direction == "none" && $(this).val() == "") {
+							arkDisplayInitMain();
+						} else if (direction == "down" && $(this).val() != "") {
+							var liSize = $("div[name='ARKLIST_MAIN'] > ul > li").size();
+							if (liSize > 0) {
+								if (arkItemIdx < liSize - 1) {
+									arkItemIdx = arkItemIdx + 1;
+								} else {
+									arkItemIdx = liSize - 1;
+								}
+							} else {
+								arkItemIdx = -1;
+							}
+						} else if (direction == "up" && $(this).val() != "") {
+							if ($("#searchKeyboardIE").length > 0) {
+								$("#searchKeyboardIE").remove();
+								arkItemIdx = arkItemIdx - 1
+							}
+							var liSize = $("div[name='ARKLIST_MAIN'] > ul > li").size();
+							if (liSize > 0) {
+								if (arkItemIdx <= 0) {
+									arkItemIdx = 0;
+								} else {
+									arkItemIdx = arkItemIdx - 1;
+								}
+							} else {
+								arkItemIdx = -1;
+							}
+						}
+
+						if ($("div[name='ARKHTML_MAIN']").css("display") != "none") {
+							if (arkItemIdx != -1) {
+								$("div[name='ARKLIST_MAIN'] > ul > li").each(function (index, item) {
+									if (index == arkItemIdx) {
+										$("input[name='q'][id='search2']").val($(item).find("div[name='keyword']").text());
+									}
+								});
+							}
+						}
+					});
+				});
+
+				var arkItemIdx = -1;
+				function arkDisplayInitMain() {
+					$("div[name='ARKHTML_MAIN']").hide();
+					$("div[name='ARKLIST_MAIN']").hide();
+					$("div[name='ARKCOMMENT0_MAIN']").hide();
+					$("div[name='ARKCOMMENT1_MAIN']").hide();
+					$("div[name='ARKCOMMENT2_MAIN']").hide();
+				}
+
+				function arkResponseParseMain(tempObj) {
+					var list = null;
+					if (null != tempObj && null != tempObj.results) {
+						list = tempObj.results;
+					}
+					var html = "";
+					$("div[name='ARKLIST_MAIN'] > ul").html(html);
+
+					if (null != list && 0 < list.length) {
+						var agent = navigator.userAgent.toLowerCase();
+						if ((navigator.appName == 'Netscape' && agent.indexOf('trident') != -1) || (agent.indexOf("msie") != -1)) {
+							html += '<li id="searchKeyboardIE" style="display:none">';
+							html += '<p class="word">';
+							html += '<a href=""> </a>';
+							html += '</p>';
+							html += '<div name="keyword" style="display:none"> </div>';
+							html += '</li>';
+						}
+						for (var i = 0; i < list.length; i++) {
+							var obj = list[i];
+							html += '<li>';
+							html += '<p class="word">';
+							html += '<a href="https://primary.ebs.co.kr/search/index#all/' + obj.WORD.trim() + '">' + obj.WORD.trim() + '</a>';
+							html += '</p>';
+							html += '<div name="keyword" style="display:none">' + obj.WORD.trim() + '</div>';
+							html += '</li>';
+						}
+					}
+
+
+					$("div[name='ARKHTML_MAIN']").show();
+					if (html != "") {
+						$("div[name='ARKLIST_MAIN'] > ul").html(html);
+						$("div[name='ARKLIST_MAIN']").show();
+					} else {
+						$("div[name='ARKCOMMENT0_MAIN']").show();
+					}
+				}
+				//키워드 자동완성 이벤트(헤더)
+
+
+				function openPleCommon(site, goUrl) {
+					var url = "";
+					var flag = isLogin();
+
+					if (site == 'primary') {
+						if (!flag) {
+							alert("로그인 후 이용가능합니다.");
+							LoginFocus();
+						} else {
+							gPlayerPopWindowWidth = 1557;
+							gPlayerPopWindowHeight = 885;
+							url = goUrl;
+							if (gPlayerPopWindow) {
+								gPlayerPopWindow.close();
+							}
+							gPlayerPopWindow = window.open(url, "_EBSPLAYERWINDOW", "width=" + gPlayerPopWindowWidth + ", height=" + gPlayerPopWindowHeight + ", toolbar=0, directories=0, status=no, menubar=0, scrollbars=1, resizable=1, fullscreen=0, top=" + gPlayerPopWindowTop + ",left=" + gPlayerPopWindowLeft);
+						}
+
+					}
+				} // 학습창 의 공통으로 이동 (쪽지,웹갈피,메모 초등만 사용 )
+
+				function openPleMemo(site) {
+					openPleCommon(site, '/pleasure/memo/index');
+				}
+
+				function openPleBookmark(site) {
+					openPleCommon(site, '/pleasure/webmark/index');
+				}
+
+				function checkAddFavorite(url, name) {
+					var agent = navigator.userAgent.toLowerCase();
+					if (agent.indexOf("chrome") != -1) {
+						alert("Ctrl + D 키를 누르시면 즐겨찾기에 추가하실 수 있습니다.");
+					} else {
+						window.external.addfavorite(url, name);
+					}
+				}
+
+				// 중학 강좌가 초등포탈에 매칭되어 있는지 확인
+				function getUserStudyFlag(courseId) {
+					var tempFlag;
+
+					$.ajax({
+						type: 'POST',
+						url: '/course/getUserStudyFlagByAjax',
+						data: { courseId: courseId },
+						async: false,
+						success: (obj) => {
+							tempFlag = obj.studyYn;
+						},
+					});
+
+					return tempFlag;
+				}
+
+				/**
+				* 초등 ON 로그 수집
+				*/
+				function priOnLog() {
+					try {
+						/* 웹로그 수집 URL. */
+						n_click_logging("/fakePath/on.ebs.co.kr");
+					} catch (error) { console.error('webLog priOnLog n_click_logging Error!!'); }
+				}
+
+				function openBannerMobile(siteId, bannerPositionId, bnnrMngId, bnnrUrl, newWndwYn, mobileUrl) {
+					var mobileFlag = isMobile();
+					var bannerDelegateUrl = "";
+					if (siteId == "primary") {
+						if (mobileFlag) {
+							bannerDelegateUrl = "/banner/primary/delegator?bnnrMngId=" + bnnrMngId + "&bnnrUrl=" + encodeURIComponent("//" + mobileUrl);
+						} else {
+							bannerDelegateUrl = "/banner/primary/delegator?bnnrMngId=" + bnnrMngId + "&bnnrUrl=" + encodeURIComponent(bnnrUrl);
+						}
+					}
+
+					if (newWndwYn == 'Y') {
+						window.open(bannerDelegateUrl, "_blank");
+					} else {
+						location.href = bannerDelegateUrl;
+					}
+
+				}
+			</script>
+			<!-- 공통 영역 -->
+
+			<!-- 2022-03-29 AI 데이터 이벤트 수신 -->
+			<form name="aiSbmFrm" id="aiSbmFrm" method="post" action="">
+				<input type="hidden" name="ai_ml_uid" id="ai_ml_uid" value="">
+				<input type="hidden" name="ai_ml_courseid" id="ai_ml_courseid" value="">
+				<input type="hidden" name="al_ml_bookid" id="al_ml_bookid" value="">
+			</form>
+			<!-- /2022-03-29 AI 데이터 이벤트 수신 -->
+
+			<form name="ssoFrm" id="ssoFrm" action="https://sso.ebs.co.kr/popup/infoChangePwd" method="post">
+				<input type="hidden" name="userId" id="userId" value="" />
+			</form>
+			<div id="win_layer"></div>
+
+			<div id="global">
+				<div class="wrap">
+					<div class="global_first">
+						<ul class="guide">
+							<li><a
+									href="https://primary.ebs.co.kr/customer/info/guide?page=play&click=main_wel">처음오셨나요?</a>
+							</li>
+							<li><a href="https://primary.ebs.co.kr/course/series/list?seriesId=main&click=main_all">강좌
+									한눈에 보기</a></li>
+						</ul>
+					</div>
+					<div class="global_second">
+						<ul class="util">
+							<!--2024-12-17-->
+							<li><a href="http://www.ebs.co.kr/onair?channelCodeString=plus2" target="_blank"
+									title="온에어">온에어</a></li>
+							<li><a href="https://www.ebs.co.kr/schedule?channelCd=PLUS2&onor=PLUS2" target="_blank"
+									title="편성표">편성표</a></li>
+							<li><a href="https://www.ebs.co.kr/schedule?channelCd=tv2&onor=tv2" target="_blank"
+									title="EBS2TV">EBS2TV</a></li>
+							<!-- //2024-12-17-->
+							<li><a href="https://primary.ebs.co.kr/customer/primary/index?click=main_help"
+									title="고객센터">고객센터</a></li>
+							<li><a href="https://primary.ebs.co.kr/customer/notice?click=main_notice1&#basic/list/143/1"
+									title="공지사항">공지사항</a></li>
+							<li><a href="https://primary.ebs.co.kr/customer/eventCurrent?menuClsfnId=25000216&menuPClsfnId=25000209&click=main_event"
+									title="이벤트">이벤트</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="integration_wrap">
+				<div class="wrap">
+					<!--메인로고-->
+					<h1 class="logo">
+						<a href="https://primary.ebs.co.kr/main/primary" alt="EBS 초등" title="EBS"><img
+								src="https://primary.ebs.co.kr/images/primary/com/logo_ebs_new.gif" alt="EBS"></a>
+						<a href="https://primary.ebs.co.kr/main/primary" alt="EBS 초등"><img
+								src="https://primary.ebs.co.kr/images/primary/com/logo_ebs_new2.gif" alt="초등" /></a>
+					</h1>
+					<!-- //메인로고-->
+					<!-- 통합검색 -->
+					<div class="header_search_area ">
+						<form method="post" name="_searchFrm" id="_searchFrm"
+							onkeydown="if(event.keyCode==13){goPrimaryMainSearch();return false;}" class="srch_frm"
+							onsubmit="goPrimaryMainSearch();">
+							<input type="image" alt="통합 검색" style="display:none;" />
+							<fieldset>
+								<legend>통합검색</legend>
+								<div class="input_wrap">
+									<input accesskey="s" type="text" id="search2" class="input_txt" title="검색" name="q"
+										value="신나는 영어 홈스쿨링- ELT 시리즈" onfocus="this.value='';" autocomplete="off" />
+									<button type="button" onclick="goPrimaryMainSearch();"
+										class="btn_top_search"><span>검색</span></button>
+								</div>
+
+								<!-- 검색어 추천 // -->
+								<div name="ARKHTML_MAIN" class="suggest_srch_pop pc_view" style="display:none;">
+									<div class="suggest_srch_wrap">
+										<!-- case -->
+										<div name="ARKLIST_MAIN" class="list" style="display:none;">
+											<ul>
+												<li>
+													<p class="word">
+														<span class="type">일반</span>
+														<a href="javascript:;"><span class="srch">초등</span>기말</a>
+													</p>
+													<p class="link"><a href="javascript:;">http://</a></p>
+												</li>
+												<li>
+													<p class="word">
+														<span class="type">일반</span>
+														<a href="javascript:;"><span class="srch">초등</span></a>
+													</p>
+													<p class="link"><a href="javascript:;">http://</a></p>
+												</li>
+												<li>
+													<p class="word">
+														<span class="type">일반</span>
+														<a href="javascript:;"><span class="srch">초등</span>수학</a>
+													</p>
+													<div class="graph">
+														<div class="bar" style="width:80%;"></div>
+													</div>
+												</li>
+												<li>
+													<p class="word">
+														<span class="type">테마</span>
+														<a href="javascript:;"><span class="srch">초등</span>학교</a>
+													</p>
+													<div class="graph">
+														<div class="bar" style="width:30%;"></div>
+													</div>
+												</li>
+											</ul>
+										</div>
+										<div name="ARKLIST_MAIN" class="foot" style="display:none;">
+											<!--p class="action">
+                                    <a href="javascript:;">첫단어 더보기</a>
+                                </p-->
+											<p class="close">
+												<a href="javascript:;"
+													onclick="$(this).closest('.suggest_srch_pop').hide(); return false;">닫기</a>
+											</p>
+										</div>
+
+										<!-- case -->
+										<div name="ARKCOMMENT2" class="msg" style="display:none;">
+											<strong>자동 추천 기능</strong>을 사용해 보세요. <a
+												href="javascript:;"><strong>기능켜기</strong></a><br />
+											검색어 입력시 자동으로 관련어를 추천합니다.
+										</div>
+										<div name="ARKCOMMENT2" class="foot" style="display:none;">
+											<p class="close">
+												<a href="javascript:;"
+													onclick="$(this).closest('.suggest_srch_pop').hide(); return false;">닫기</a>
+											</p>
+										</div>
+
+										<!-- case -->
+										<div name="ARKCOMMENT1" class="msg" style="display:none;">
+											현재 검색어 <strong>자동 추천 기능</strong>을 사용하고 있습니다.<br />
+											검색어 입력시 자동으로 관련어를 추천합니다.
+										</div>
+										<div name="ARKCOMMENT1" class="foot" style="display:none;">
+											<p class="close">
+												<a href="javascript:;"
+													onclick="$(this).closest('.suggest_srch_pop').hide(); return false;">닫기</a>
+											</p>
+										</div>
+
+										<!-- case -->
+										<div name="ARKCOMMENT0" class="msg" style="display:none;">
+											해당 단어로 시작하는 검색어가 없습니다.
+										</div>
+										<div name="ARKCOMMENT0" class="foot" style="display:none;">
+											<!--p class="action">
+                                    <a href="javascript:;">끝단어 더보기</a>
+                                </p-->
+											<p class="close">
+												<a href="javascript:;"
+													onclick="$(this).closest('.suggest_srch_pop').hide(); return false;">닫기</a>
+											</p>
+										</div>
+
+									</div>
+								</div>
+								<!-- 검색어 추천 // -->
+							</fieldset>
+						</form>
+					</div>
+					<!-- //통합검색 -->
+
+					<!-- 로그인 영역 -->
+					<div class="header_login_area">
+						<!-- 로그인 전 -->
+						<div class="in_box">
+							<a href="javascript:;" onclick="LoginFocus(); return false;" class="txt_login">로그인</a>
+						</div>
+					</div>
+					<!-- //로그인 영역 -->
+				</div>
+
+				<!-- gnb -->
+				<div id="gnb" class="am07">
+					<div class="wrap">
+						<ul class="nav">
+							<!-- 초등 nav START -->
+							<li><a href="javascript:;" onclick="LoginFocus('/mypage/index?click=main_gnb1');"
+									class="mm">나의 학습방</a></li>
+							<li class="on"><a href="https://primary.ebs.co.kr/course/primary/index?click=main_gnb1"
+									class="mm">강좌/교재</a></li>
+							<li><a href="https://primary.ebs.co.kr/CPG/primary/index?click=main_gnb1"
+									class="mm">창의체험</a></li>
+							<li><a href="https://primary.ebs.co.kr/space/primary/index?click=main_gnb1"
+									class="mm">참여공간</a></li>
+							<li><a href="https://primary.ebs.co.kr/parent/primary/index?click=main_gnb1"
+									class="mm">교사/학부모</a></li>
+							<li><a href="https://ai-new.ebs.co.kr/pri" target="_blank" class="mm">AI추천학습</a></li>
+							<li>
+								<a href="https://primary.ebs.co.kr/common/download/redirect?url=https://on.ebs.co.kr/main.ebs?EBSin_=EBSin_primary"
+									onclick="priOnLog();" class="mm" target="_blank">
+									<img src="https://primary.ebs.co.kr/images/primary/index/gnb_img_07.png"
+										alt="초등ON" />
+								</a>
+							</li>
+							<!--// 초등 nav END -->
+						</ul>
+						<button type="button" class="btn_total_menu_open">전체메뉴</button>
+						<div class="total_menu_wrap">
+							<ul class="layer_total_list">
+								<li class="list_cn">
+									<ul class="sub">
+										<li>
+											<a href="javascript:;"
+												onclick="LoginFocus('http://primary.ebs.co.kr/mypage/course/current/list?click=main_gnb2');"
+												style="">수강중인 강좌</a>
+										</li>
+										<li>
+											<a href="javascript:;"
+												onclick="LoginFocus('http://primary.ebs.co.kr/mypage/course/complete/list?click=main_gnb2');"
+												style="">수강완료 강좌</a>
+										</li>
+										<li>
+											<a href="javascript:;"
+												onclick="LoginFocus('http://primary.ebs.co.kr/mypage/selfDirectedLearningList?click=main_gnb2');"
+												style="">내가 만든 강좌</a>
+										</li>
+										<li>
+											<a href="javascript:;"
+												onclick="LoginFocus('http://primary.ebs.co.kr/mypage/post/qna/index?click=main_gnb2&amp;');"
+												style="">Q&amp;A/게시글관리</a>
+										</li>
+										<li>
+											<a href="javascript:;"
+												onclick="LoginFocus('http://primary.ebs.co.kr/mypage/status?click=main_gnb2');"
+												style="">학습 플래너</a>
+										</li>
+									</ul>
+								</li>
+								<li class="list_cn">
+									<ul class="sub">
+										<li>
+											<a href="https://primary.ebs.co.kr/course/series/list?seriesId=main&click=main_gnb2"
+												style="">시리즈별 강좌</a>
+										</li>
+										<li>
+											<a href="https://primary.ebs.co.kr/course/popularCourse?schType=week&click=main_gnb2"
+												style="">인기강좌 순위</a>
+										</li>
+										<li>
+											<a href="https://primary.ebs.co.kr/course/numeracy?click=main_gnb2"
+												style="">초등 수해력</a>
+										</li>
+										<li>
+											<a href="https://primary.ebs.co.kr/course/literacy?click=main_gnb2"
+												style="">초등 문해력</a>
+										</li>
+										<li>
+											<a href="https://primary.ebs.co.kr/book/main/index?mobileType=Y&bnnrMngId=&seriesId=&studyTargetCode=all&studySubjectCode=all&click=main_gnb2"
+												style="">교재 로드맵</a>
+										</li>
+										<li>
+											<a href="https://primary.ebs.co.kr/book/answer/index?click=main_gnb2"
+												style="">교재/정답지 자료</a>
+										</li>
+										<li>
+											<a href="https://primary.ebs.co.kr/teacher/primary/index?click=main_gnb2"
+												style="">우리 선생님</a>
+										</li>
+									</ul>
+								</li>
+								<li class="list_cn">
+									<ul class="sub">
+										<li>
+											<a href="https://primary.ebs.co.kr/CPG/course/view?courseId=10201320&click=main_gnb2"
+												style="">생존수영</a>
+										</li>
+										<li>
+											<a href="https://primary.ebs.co.kr/CPG/course/view?courseId=100003554&click=main_gnb2"
+												style="">안전채널e</a>
+										</li>
+										<li>
+											<a href="https://primary.ebs.co.kr/CPG/course/view?courseId=10200890&click=main_gnb2"
+												style="">야옹! 클래식</a>
+										</li>
+										<li>
+											<a href="https://primary.ebs.co.kr/CPG/course/view?courseId=10001543&click=main_gnb2"
+												style="">한자</a>
+										</li>
+										<li>
+											<a href="https://primary.ebs.co.kr/CPG/course/view?courseId=10021654&click=main_gnb2"
+												style="">소프트웨어</a>
+										</li>
+										<li>
+											<a href="https://primary.ebs.co.kr/CPG/course/view?courseId=10202560&click=main_gnb2"
+												style="">역사</a>
+										</li>
+										<li>
+											<a href="https://primary.ebs.co.kr/CPG/course/webtoonView?click=main_gnb2"
+												style="">물상객주 웹툰</a>
+										</li>
+										<li>
+											<a href="https://primary.ebs.co.kr/CPG/course/webtoonView?boardId=10016188&click=main_gnb2"
+												style="">고구려 웹툰</a>
+										</li>
+									</ul>
+								</li>
+								<li class="list_cn">
+									<ul class="sub">
+										<li>
+											<a href="https://primary.ebs.co.kr/book/edu/ebsnews/list?click=main_gnb2"
+												style="">EBS뉴스</a>
+										</li>
+										<li>
+											<a href="https://primary.ebs.co.kr/book/edu/license?click=main_gnb2&"
+												style="">자격증 시험정보</a>
+										</li>
+										<li>
+											<a href="https://primary.ebs.co.kr/book/content/index?click=main_gnb2"
+												style="">추천 콘텐츠</a>
+										</li>
+										<li>
+											<a href="https://primary.ebs.co.kr/space/clip/campaignClip?click=main_gnb2"
+												style="">EBS 안전캠페인</a>
+										</li>
+										<li>
+											<a href="https://primary.ebs.co.kr/space/rankingzone?tabNm=TOTAL&click=main_gnb2"
+												style="">학습지수 순위</a>
+										</li>
+										<li>
+											<a href="https://primary.ebs.co.kr/space/rankingzone/guide?click=main_gnb2"
+												style="">학습지수 소개</a>
+										</li>
+										<li>
+											<a href="https://primary.ebs.co.kr/space/career?click=main_gnb2"
+												style="">주니어 직업정보</a>
+										</li>
+										<li>
+											<a href="https://primary.ebs.co.kr/space/PTM?lowMenu=knowhow&click=main_gnb2"
+												style="">나만의 노하우</a>
+										</li>
+										<li>
+											<a href="https://primary.ebs.co.kr/book/edu/ebsnews/list?encodingSeq=&lectId=&page=1&key=1&query=쉬운 우리말&click=main_gnb2"
+												style="">쉬운 우리말</a>
+										</li>
+									</ul>
+								</li>
+								<li class="list_cn">
+									<ul class="sub">
+										<li>
+											<a href="https://primary.ebs.co.kr/space/tservice/certificationInfo?menuClsfnId=&menuPClsfnId=&click=main_gnb2"
+												style="">사이버학급</a>
+										</li>
+										<li>
+											<a href="https://primary.ebs.co.kr/space/tservice/learningResources?click=main_gnb2#classCommunity/list/10005189//"
+												style="">교사 학습자료</a>
+										</li>
+										<li>
+											<a href="https://primary.ebs.co.kr/parent/child/study/status?click=main_gnb2"
+												style="">자녀 학습관리</a>
+										</li>
+										<li>
+											<a href="https://primary.ebs.co.kr/parent/guide?page=child&click=main_gnb2"
+												style="">학부모 가이드</a>
+										</li>
+										<li>
+											<a href="https://primary.ebs.co.kr/parent/clip/teacherClip?click=main_gnb2"
+												style="">교과연계 클립</a>
+										</li>
+										<li>
+											<a href="https://primary.ebs.co.kr/parent/clip/teacherClip?courseId=10015845&click=main_gnb2"
+												style="">교육방송 연구대회 클립</a>
+										</li>
+										<li>
+											<a href="https://primary.ebs.co.kr/space/primarySpecialLecture?menuClsfnId=&menuPClsfnId=&click=main_gnb2"
+												style="">예비 초등학생 특강</a>
+										</li>
+									</ul>
+								</li>
+								<li class="list_cn">
+									<ul class="sub">
+										<li>
+											<a href="https://ai-new.ebs.co.kr/pri/main/main.ebs" target="_blank"
+												style="">오늘의 단추</a>
+										</li>
+										<li>
+											<a href="	 https://ai-new.ebs.co.kr/pri/dgnsevl/dgnsEvl.ebs" target="_blank"
+												style="">진단평가</a>
+										</li>
+										<li>
+											<a href="https://ai-new.ebs.co.kr/pri/itemrcmd/itemrcmd.ebs" target="_blank"
+												style="">AI 문제추천</a>
+										</li>
+										<li>
+											<a href="https://ai-new.ebs.co.kr/pri/crscmd/selectCourseRcmd.ebs"
+												target="_blank" style="">AI 강좌추천</a>
+										</li>
+										<li>
+											<a href="https://ai-new.ebs.co.kr/pri/exmpaper/makeExmPaper.ebs"
+												target="_blank" style="">시험지 만들기</a>
+										</li>
+										<li>
+											<a href="https://ai-new.ebs.co.kr/pri/board/boardReviewList.ebs"
+												target="_blank" style="">단추후기</a>
+										</li>
+										<li>
+											<a href="https://ai-new.ebs.co.kr/pri/lrnstts/studyStatusMain.ebs"
+												target="_blank" style="">학습현황</a>
+										</li>
+									</ul>
+								</li>
+								<li class="list_cn">
+									<ul class="sub">
+										<li>
+											<a href="https://primary.ebs.co.kr/common/download/redirect?url=https://on.ebs.co.kr/event/newEventDetail.ebs?grp_event_id=5921&menu_id=1905"
+												target="_blank" style="">한눈에 커리큘럼</a>
+										</li>
+										<li>
+											<a href="https://primary.ebs.co.kr/common/download/redirect?url=https://on.ebs.co.kr/event/newEventDetail.ebs?grp_event_id=5941&menu_id=1905"
+												target="_blank" style="">한눈에 시리즈</a>
+										</li>
+										<li>
+											<a href="https://primary.ebs.co.kr/common/download/redirect?url=https://on.ebs.co.kr/course/math/main.ebs?menu_id=3008"
+												target="_blank" style="">수학반</a>
+										</li>
+										<li>
+											<a href="https://primary.ebs.co.kr/common/download/redirect?url=https://on.ebs.co.kr/course/eng/main.ebs?menu_id=3009"
+												target="_blank" style="">영어반</a>
+										</li>
+										<li>
+											<a href="https://primary.ebs.co.kr/common/download/redirect?url=https://on.ebs.co.kr/course/all/main.ebs?menu_id=3010"
+												target="_blank" style="">모든강좌</a>
+										</li>
+										<li>
+											<a href="https://primary.ebs.co.kr/common/download/redirect?url=https://on.ebs.co.kr/course/parents/main.ebs?menu_id=3159"
+												target="_blank" style="">학부모반</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- //gnb -->
+
+				<!-- foot -->
+				<div class="foot">
+					<div class="wrap">
+						<!-- left 레이어 메뉴를 위한 GNB 분류체계값 세팅  -->
+						<!-- 창의체험 -->
+						<!-- 교과/교재 -->
+						<!-- 나의 학습방 -->
+						<!-- 참여공간 1-->
+						<!-- 참여공간 2-->
+						<!-- 생애주기 -->
+						<!-- 교사/학부모 -->
+						<!-- 교사/학부모2 -->
+						<!-- 교사/학부모3 -->
+						<!-- 교사/학부모 -->
+						<!-- 고객센터 -->
+						<!-- 교과연계, 연구대회 클립 -->
+						<!-- 창체활동 클립 -->
+						<!-- 고객센터 -->
+						<!-- 수준별맞춤학습 -->
+						<script type="text/javascript">
+							function go_move(from, target, url, newWndwYn, menuPClsfnId) {
+								//var clsfnList = $("#menu_deps_"+target); 
+
+								//초등 창의체험 - 여행, 독서일떄 필요없는 url추가되지않도록
+								if (target == "25000070" || target == "25000071") {
+									location.href = url;
+									return false;
+								}
+								//pleasure  경우
+								var target = "";
+
+								//ple 클립담기경우
+								if ((target == "25000307" || target == "25000092") && pleWeb == "ple") {
+									openPleClip("primary");
+
+								} else {
+									if (url != "") {
+										if (url.indexOf("/book/eip/selfunittarget/list") > -1 || url.indexOf("/book/eip/myTestResult") > -1) {
+											if (true) {
+												if (confirm("로그인 후 이용하실 수 있습니다.")) {
+													LoginFocus();
+												}
+												return false;
+											}
+										}
+
+										if (newWndwYn == "Y") {
+											window.open(url); return false;
+										} else {
+											if (target == "ple") {
+												if (url.indexOf("/course/series/list") > -1) {
+													location.href = "/pleasure/course/list/grade/index#series-" + url.split("seriesId=")[1].replace(/&.*/g, '');
+												} else if (url.indexOf("/course/grade/list") > -1) {
+													location.href = "/pleasure/course/list/grade/index#grade-" + url.split("tab=")[1].substr(0, 1);
+												} else {
+													window.open(url);
+												}
+												return;
+											}
+											if (url.indexOf("?") == -1) location.href = url + "?menuClsfnId=" + target + "&menuPClsfnId=" + menuPClsfnId;
+											else location.href = url + "&menuClsfnId=" + target + "&menuPClsfnId=" + menuPClsfnId;
+										}
+
+
+									}
+								}
+							}
+
+							//우리반 커뮤니티 체크
+							/**
+							* 사이버학급
+							*/
+							function cyberClassViewUI() {
+								if (true) {
+									location.href = '/space/student/popup/primary/tservice/index';
+								} else {
+									if (true) {
+										if (confirm("로그인 후 이용하실 수 있습니다.")) {
+											LoginFocus();
+										}
+										return false;
+									} else {
+										cyberClassView('/space/student/popup/tservice/community?cyberClassId=&tabId=board');
+									}
+								}
+							}
+
+						</script>
+						<button type="button" class="btn_menu_layer"><span>메뉴 열기/닫기</span></button>
+
+						<!-- left 레이어 메뉴를 위한 GNB 분류체계값 세팅  -->
+						<!-- 교과/교재  창의체험-->
+						<h2 class="tit_sub_txt">강좌/교재</h2>
+						<div class="menu_layer" style="display:none;">
+							<ul class="main">
+								<li class="d1_li">
+									<a href="#none"
+										onclick="javascript:go_move('deps_00','25000904','/CPG/course/view?courseId=10201320','N','');"
+										class="mm">생존수영</a><a href="javascript:;" class="btn_sub on" id="25000904"
+										style="display:none;">버튼</a>
+								</li><!--// d1_li -->
+								<li class="d1_li">
+									<a href="#none"
+										onclick="javascript:go_move('deps_00','25000969','/CPG/course/view?courseId=100003554','N','');"
+										class="mm">안전채널e</a><a href="javascript:;" class="btn_sub on" id="25000969"
+										style="display:none;">버튼</a>
+								</li><!--// d1_li -->
+								<li class="d1_li">
+									<a href="#none"
+										onclick="javascript:go_move('deps_00','25000638','/CPG/course/view?courseId=10200890','N','');"
+										class="mm">야옹! 클래식</a><a href="javascript:;" class="btn_sub on" id="25000638"
+										style="display:none;">버튼</a>
+								</li><!--// d1_li -->
+								<li class="d1_li">
+									<span class="mm">엉뚱 남매</span><a href="javascript:;" class="btn_sub " id="25000637"
+										style="display:none;">버튼</a>
+									<ul class="sub">
+										<script>$('#25000637').attr('style', 'display:;');</script>
+										<li class="d2_li"><a href="#none"
+												onclick="javascript:go_move('deps_01','25000859','/CPG/course/view?courseId=10033013','N','');">엉뚱
+												남매 공작소</a>
+										</li>
+										<script>$('#25000637').attr('style', 'display:;');</script>
+										<li class="d2_li"><a href="#none"
+												onclick="javascript:go_move('deps_01','25000858','/CPG/course/view?courseId=10034553','N','');">엉뚱
+												남매 요리조리쇼</a>
+										</li>
+									</ul><!--// sub -->
+								<li class="d1_li">
+									<span class="mm">스쿨랜드</span><a href="javascript:;" class="btn_sub on" id="25000383"
+										style="display:none;">버튼</a>
+									<ul class="sub" style="display:none;">
+										<script>$('#25000383').attr('style', 'display:;');</script>
+										<li class="d2_li"><a href="#none"
+												onclick="javascript:go_move('deps_01','25000388','/CPG/course/view?courseId=10005917','N','');">과학</a>
+										</li>
+										<script>$('#25000383').attr('style', 'display:;');</script>
+										<li class="d2_li"><a href="#none"
+												onclick="javascript:go_move('deps_01','25000389','/CPG/course/view?courseId=10005919','N','');">인성</a>
+										</li>
+										<script>$('#25000383').attr('style', 'display:;');</script>
+										<li class="d2_li"><a href="#none"
+												onclick="javascript:go_move('deps_01','25000390','/CPG/course/view?courseId=10005918','N','');">철학</a>
+										</li>
+										<script>$('#25000383').attr('style', 'display:;');</script>
+										<li class="d2_li"><a href="#none"
+												onclick="javascript:go_move('deps_01','25000391','/CPG/course/view?courseId=10005920','N','');">예술</a>
+										</li>
+										<script>$('#25000383').attr('style', 'display:;');</script>
+										<li class="d2_li"><a href="#none"
+												onclick="javascript:go_move('deps_01','25000457','/CPG/course/view?courseId=10010017','N','');">절대비법</a>
+										</li>
+										<script>$('#25000383').attr('style', 'display:;');</script>
+										<li class="d2_li"><a href="#none"
+												onclick="javascript:go_move('deps_01','25000458','/CPG/course/view?courseId=10010734','N','');">틴틴인터뷰</a>
+										</li>
+										<script>$('#25000383').attr('style', 'display:;');</script>
+										<li class="d2_li"><a href="#none"
+												onclick="javascript:go_move('deps_01','25000459','/CPG/course/view?courseId=10013689','N','');">학습송</a>
+										</li>
+										<script>$('#25000383').attr('style', 'display:;');</script>
+										<li class="d2_li"><a href="#none"
+												onclick="javascript:go_move('deps_01','25000491','/CPG/course/view?courseId=10017766','N','');">한자왕국</a>
+											<img src="https://primary.ebs.co.kr/images/primary/respond/common/tab_type_new_ico.gif"
+												alt="NEW" class="ico" />
+										</li>
+										<script>$('#25000383').attr('style', 'display:;');</script>
+										<li class="d2_li"><a href="#none"
+												onclick="javascript:go_move('deps_01','25000538','/CPG/course/view?courseId=10018974','N','');">사자성어</a>
+											<img src="https://primary.ebs.co.kr/images/primary/respond/common/tab_type_new_ico.gif"
+												alt="NEW" class="ico" />
+										</li>
+										<script>$('#25000383').attr('style', 'display:;');</script>
+										<li class="d2_li"><a href="#none"
+												onclick="javascript:go_move('deps_01','25000595','/CPG/course/view?courseId=10023753','N','');">초등생활
+												매너백서</a>
+											<img src="https://primary.ebs.co.kr/images/primary/respond/common/tab_type_new_ico.gif"
+												alt="NEW" class="ico" />
+										</li>
+									</ul><!--// sub -->
+								<li class="d1_li">
+									<span class="mm">과학</span><a href="javascript:;" class="btn_sub " id="25000428"
+										style="display:none;">버튼</a>
+									<ul class="sub">
+										<script>$('#25000428').attr('style', 'display:;');</script>
+										<li class="d2_li"><a href="#none"
+												onclick="javascript:go_move('deps_01','25000892','/CPG/course/view?courseId=10033014','N','');">과학할
+												고양</a>
+										</li>
+										<script>$('#25000428').attr('style', 'display:;');</script>
+										<li class="d2_li"><a href="#none"
+												onclick="javascript:go_move('deps_01','25000623','/CPG/course/view?courseId=10027993','N','');">과학땡Q</a>
+										</li>
+										<script>$('#25000428').attr('style', 'display:;');</script>
+										<li class="d2_li"><a href="#none"
+												onclick="javascript:go_move('deps_01','25000460','/CPG/course/view?courseId=10005921','N','');">사이틴
+												시즌1</a>
+										</li>
+										<script>$('#25000428').attr('style', 'display:;');</script>
+										<li class="d2_li"><a href="#none"
+												onclick="javascript:go_move('deps_01','25000432','/CPG/course/view?courseId=10010736','N','');">사이틴-지구인
+												자격 평가</a>
+										</li>
+										<script>$('#25000428').attr('style', 'display:;');</script>
+										<li class="d2_li"><a href="#none"
+												onclick="javascript:go_move('deps_01','25000433','/CPG/course/view?courseId=10010735','N','');">사이틴-백만이의
+												지구뉴스</a>
+										</li>
+										<script>$('#25000428').attr('style', 'display:;');</script>
+										<li class="d2_li"><a href="#none"
+												onclick="javascript:go_move('deps_01','25000461','/CPG/course/view?courseId=10010496','N','');">과학
+												탐정단, 시드</a>
+										</li>
+										<script>$('#25000428').attr('style', 'display:;');</script>
+										<li class="d2_li"><a href="#none"
+												onclick="javascript:go_move('deps_01','25000455','/CPG/course/view?courseId=10016726','N','');">왔다!
+												사춘기</a>
+										</li>
+										<script>$('#25000428').attr('style', 'display:;');</script>
+										<li class="d2_li"><a href="#none"
+												onclick="javascript:go_move('deps_01','25000583','/CPG/course/view?courseId=10022877','N','');">달그락달그락
+												교과서 실험실</a>
+										</li>
+									</ul><!--// sub -->
+								<li class="d1_li">
+									<span class="mm">오 마이 미래 2035</span><a href="javascript:;" class="btn_sub "
+										id="25000425" style="display:none;">버튼</a>
+									<ul class="sub">
+										<script>$('#25000425').attr('style', 'display:;');</script>
+										<li class="d2_li"><a href="#none"
+												onclick="javascript:go_move('deps_01','25000492','/CPG/course/view?courseId=10017757','N','');">미래강연</a>
+										</li>
+										<script>$('#25000425').attr('style', 'display:;');</script>
+										<li class="d2_li"><a href="#none"
+												onclick="javascript:go_move('deps_01','25000539','/CPG/course/view?courseId=10018975','N','');">미래토크</a>
+										</li>
+										<script>$('#25000425').attr('style', 'display:;');</script>
+										<li class="d2_li"><a href="#none"
+												onclick="javascript:go_move('deps_01','25000544','/CPG/course/view?courseId=10019195','N','');">신
+												극한직업</a>
+										</li>
+									</ul><!--// sub -->
+								<li class="d1_li">
+									<span class="mm">한자</span><a href="javascript:;" class="btn_sub " id="25000386"
+										style="display:none;">버튼</a>
+									<ul class="sub">
+										<script>$('#25000386').attr('style', 'display:;');</script>
+										<li class="d2_li"><a href="#none"
+												onclick="javascript:go_move('deps_01','25000484','/CPG/course/view?courseId=10001543','N','');">천하무적
+												한자 900</a>
+										</li>
+										<script>$('#25000386').attr('style', 'display:;');</script>
+										<li class="d2_li"><a href="#none"
+												onclick="javascript:go_move('deps_01','25000485','/CPG/course/view?courseId=10016152','N','');">어휘랑!
+												교과서 한자어 1</a>
+										</li>
+										<script>$('#25000386').attr('style', 'display:;');</script>
+										<li class="d2_li"><a href="#none"
+												onclick="javascript:go_move('deps_01','25000582','/CPG/course/view?courseId=10022923','N','');">어휘랑!
+												교과서 한자어 2</a>
+										</li>
+									</ul><!--// sub -->
+								<li class="d1_li">
+									<span class="mm">헬로! EBS 소프트웨어</span><a href="javascript:;" class="btn_sub "
+										id="25000385" style="display:none;">버튼</a>
+									<ul class="sub">
+										<script>$('#25000385').attr('style', 'display:;');</script>
+										<li class="d2_li"><a href="#none"
+												onclick="javascript:go_move('deps_01','25000617','/CPG/course/view?courseId=10021654','N','');">헬로!
+												EBS 소프트웨어</a>
+										</li>
+										<script>$('#25000385').attr('style', 'display:;');</script>
+										<li class="d2_li"><a href="#none"
+												onclick="javascript:go_move('deps_01','25000616','/CPG/course/view?courseId=10026770','N','');">헬로!
+												EBS 소프트웨어 엔트리</a>
+										</li>
+									</ul><!--// sub -->
+								<li class="d1_li">
+									<span class="mm">역사</span><a href="javascript:;" class="btn_sub " id="25000384"
+										style="display:none;">버튼</a>
+									<ul class="sub">
+										<script>$('#25000384').attr('style', 'display:;');</script>
+										<li class="d2_li"><a href="#none"
+												onclick="javascript:go_move('deps_01','25000911','/CPG/course/view?courseId=10202560','N','');">역사가
+												술술</a>
+										</li>
+										<script>$('#25000384').attr('style', 'display:;');</script>
+										<li class="d2_li"><a href="#none"
+												onclick="javascript:go_move('deps_01','25000910','/CPG/course/view?courseId=10005149','N','');">역사
+												ⓔ 뉴스 </a>
+										</li>
+									</ul><!--// sub -->
+								<li class="d1_li">
+									<a href="#none"
+										onclick="javascript:go_move('deps_00','25000550','/CPG/course/webtoonView','N','');"
+										class="mm">물상객주 웹툰</a><a href="javascript:;" class="btn_sub on" id="25000550"
+										style="display:none;">버튼</a>
+								</li><!--// d1_li -->
+								<li class="d1_li">
+									<a href="#none"
+										onclick="javascript:go_move('deps_00','25000893','/CPG/course/webtoonView?boardId=10016188','N','');"
+										class="mm">고구려 웹툰</a><a href="javascript:;" class="btn_sub on" id="25000893"
+										style="display:none;">버튼</a>
+								</li><!--// d1_li -->
+							</ul>
+						</div>
+						<ul class="foot_link">
+							<li><a href="#none"
+									onclick="window.open('/customer/info/guide/pop?page=main','pop01','width=750,height=610, scrollbars=0');return false;"
+									title="사이트 이용가이드 새창">초등 이용가이드</a></li>
+							<li><a href="#app_down_pop" class="app_down_link"
+									onclick="$('#app_down_pop').toggle(); return false;">모바일앱</a></li>
+						</ul>
+						<div id="app_down_pop" class="app_down_pop" style="display:none;">
+							<div class="qr_wrap">
+								<div class="qrpop_top">
+									<p class="qrpop_tit"><img
+											src="https://primary.ebs.co.kr/images/primary/com/tit_app_down.gif"
+											alt="모바일앱 다운로드"></p>
+									<p class="btn_close"><a href="javascript:;"
+											onclick="$('#app_down_pop').hide(); return false;">
+											<img src="https://primary.ebs.co.kr/images/primary/com/app_down_qrpop_close.gif"
+												alt="닫기"></a>
+									</p>
+								</div>
+								<div class="qrcode">
+									<img src="https://primary.ebs.co.kr/images/primary/com/app_down_qr_pop.jpg"
+										alt="안드로이드 앱, 아이폰 앱 다운 qr코드" usemap="#qr_img">
+									<map name="qr_img" id="qr_img">
+										<area shape="rect" coords="72,39,209,55" href="http://goo.gl/KEt1XF"
+											target="_balnk" alt="안드로이드 APP 연결">
+										<area shape="rect" coords="306,39,446,55" href="http://goo.gl/G7FhE2"
+											target="_balnk" alt="아이폰 APP 연결">
+									</map>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+				<!--//foot -->
+			</div>
+			<script type="text/javascript">
+
+				function autoResize(i) {
+					var iframeHeight = screen.height;
+					if (screen.height > $(window).height() + 500) {
+						iframeHeight = $(window).height();
+					}
+				}
+
+				/* AI GNB 메뉴 클릭 이벤트 */
+				function fnAlertAfterCheckAppForAi($type) {
+
+					if (checkApp()) {
+						alert('AI 학습진단은 아래 단추 캐릭터를 클릭해서 이동해주세요.');
+						return;
+					}
+
+					let tempUrl;
+
+					switch ($type) {
+						case 'diagEval': tempUrl = 'https://ai.ebs.co.kr/pri/dgnsevl/dgnsEvl.ebs'; break;
+						case 'itemRcmd': tempUrl = 'https://ai.ebs.co.kr/pri/itemrcmd/itemrcmd.ebs'; break;
+						case 'courseRcmd': tempUrl = 'https://ai.ebs.co.kr/pri/crscmd/selectCourseRcmd.ebs'; break;
+						case 'mkPaper': tempUrl = 'https://ai.ebs.co.kr/pri/exmpaper/makeExmPaper.ebs'; break;
+						case 'lrnStatus': tempUrl = 'https://ai.ebs.co.kr/pri/lrnstts/solvedItemList.ebs'; break;
+						default: tempUrl = 'https://ai.ebs.co.kr/pri/';
+					}
+
+					let anchor = document.createElement('a');
+					anchor.target = '_blank';
+					anchor.href = tempUrl;
+					anchor.click();
+				}
+
+				/* 초등 AI(NEW) GNB 메뉴 클릭 이벤트 */
+				function fnAlertAfterCheckAppForAiNew($type) {
+
+					if (checkApp()) {
+						alert('AI 추천학습은 아래 단추 캐릭터를 클릭해서 이동해주세요.');
+						return;
+					}
+
+					let tempUrl;
+
+					switch ($type) {
+						case 'todayDanchoo': tempUrl = 'https://ai-new.ebs.co.kr/pri/main/main.ebs'; break;
+						case 'diagEval': tempUrl = 'https://ai-new.ebs.co.kr/pri/dgnsevl/dgnsEvl.ebs'; break;
+						case 'itemRcmd': tempUrl = 'https://ai-new.ebs.co.kr/pri/itemrcmd/itemrcmd.ebs'; break;
+						case 'courseRcmd': tempUrl = 'https://ai-new.ebs.co.kr/pri/crscmd/selectCourseRcmd.ebs'; break;
+						case 'mkPaper': tempUrl = 'https://ai-new.ebs.co.kr/pri/exmpaper/makeExmPaper.ebs'; break;
+						case 'danchooReview': tempUrl = 'https://ai-new.ebs.co.kr/pri/board/boardReviewList.ebs'; break;
+						case 'lrnStatus': tempUrl = 'https://ai-new.ebs.co.kr/pri/lrnstts/studyStatusMain.ebs'; break;
+						default: tempUrl = 'https://ai-new.ebs.co.kr/pri';
+					}
+
+					let anchor = document.createElement('a');
+					anchor.target = '_blank';
+					anchor.href = tempUrl;
+					anchor.click();
+				}
+			</script>
+
+
+			<!-- 모바일 header -->
+			<div class="header bantop"><!-- 2022-02-10 당신의 문해력 탑배너 bantop 클래스 추가 -->
+				<div class="wrap_header default"><!-- 2022-02-10 당신의 문해력 탑배너 default 클래스 추가 -->
+					<h1 class="logo"><!--2021-01-06 클래스 추가-->
+						<a href="https://primary.ebs.co.kr/main/primary"><img
+								src="https://primary.ebs.co.kr/images/primary/respond/common/logo.png" alt="EBS 초등"></a>
+					</h1>
+					<div class="util">
+						<nav class="group_1">
+							<a href="javascript:;"><img
+									src="https://primary.ebs.co.kr/images/primary/respond/common/btn_top_drawer.png"
+									alt="메뉴 전체보기"></a>
+						</nav>
+						<nav class="group_2">
+							<a href="javascript:;" id="btn_user_lect" alt="로그인">
+								<img src="https://primary.ebs.co.kr/images/primary/respond/common/login_ico.png"
+									alt="로그인">
+							</a>
+						</nav>
+					</div>
+				</div>
+
+				<div class="nav_main_wraper">
+					<ul class="nav_main swiper-wrapper">
+						<li class="swiper-slide"><a href="javascript:;" onclick="newCheckLoginMyRooom();"><span
+									class="tit">나의 학습방</span><span class="deco"></span> </a></li>
+						<li class="swiper-slide on"><a href="https://primary.ebs.co.kr/course/primary/index"><span
+									class="tit">강좌/교재</span> <span class="deco"></span> </a></li>
+						<!-- 2021-01-27 -->
+						<!-- 신규 URL -->
+						<!-- 2021-01-27 -->
+						<li class="swiper-slide"><a href="https://primary.ebs.co.kr/CPG/primary/index"><span
+									class="tit">창의체험</span> <span class="deco"></span> </a></li>
+						<!-- 2023-04-06 초등on 추가 -->
+						<li class="swiper-slide pmy_on"><a
+								href="https://primary.ebs.co.kr/common/download/redirect?url=https://on.ebs.co.kr/main.ebs?EBSin_=EBSin_primary"
+								onclick="priOnLog();" target="_blank"><span class="tit"><img
+										src="https://primary.ebs.co.kr/images/primary/index/pmy_on.png"
+										alt="초등ON" /></span></span><span class="deco"></span> </a></li>
+						<!-- // 2023-04-06 -->
+						<li class="swiper-slide"><a href="https://primary.ebs.co.kr/space/primary/index"><span
+									class="tit">참여공간</span><span class="deco"></span> </a></li>
+						<li class="swiper-slide"><a href="https://primary.ebs.co.kr/parent/primary/index"><span
+									class="tit">교사/학부모</span><span class="deco"></span> </a></li>
+						<li class="swiper-slide"><a href="javascript:fnAlertAfterCheckAppForAiNew();"><span
+									class="tit">AI 추천학습</span></span><span class="deco"></span> </a></li>
+						<li class="swiper-slide"><a
+								href="https://primary.ebs.co.kr/teacherBook/primary/index?page=answer"><span
+									class="tit">교사용 교재 <span class="txt_hidden">자료</span></span><span
+									class="deco"></span> </a></li>
+						<li class="swiper-slide"><a href="https://primary.ebs.co.kr/customer/primary/index"><span
+									class="tit">고객센터</span><span class="deco"></span> </a></li>
+					</ul>
+					<span class="grd_prev bgNone"></span>
+					<span class="grd_next"></span>
+				</div>
+				<!-- 문제은행 : gnb 스와이프 기능 추가 시작 -->
+				<script type="text/javascript">
+					var mobileNav = new Swiper('.nav_main_wraper', {
+						pagination: '.swiper-pagination',
+						slidesPerView: 4, //2024-12-17
+						paginationClickable: true,
+						spaceBetween: 0,
+						breakpoints: {
+							761: { slidesPerView: 5 } //2024-12-19 수정
+						},
+						onSlideNextEnd: function (swiper) {
+							$('.nav_main_wraper .grd_next').addClass('bgNone');
+							$('.nav_main_wraper .grd_prev').removeClass('bgNone');
+						},
+						onSlidePrevEnd: function (swiper) {
+							$('.nav_main_wraper .grd_next').removeClass('bgNone');
+							$('.nav_main_wraper .grd_prev').addClass('bgNone');
+						}
+					});
+					if ($(".swiper-slide.on").index() > 3) mobileNav.slideTo(2);
+				</script>
+				<!-- 문제은행 : gnb 스와이프 기능 추가 끝 -->
+				 <div class="nav_tab2_wrap">
+					<ul class="nav_tab2 mystudy">
+						<li class="on"><a href="/course/primary/index">교과/교재 홈</a></li>
+						<li class=""><a href="/course/grade/list?tab=6s&amp;clsfsSysId=21000014&amp;menuClsfnId=25000022&amp;menuPClsfnId=25000018">학년별 보기</a></li>
+						<li class=""><a href="/course/series/list?seriesId=main">시리즈별 보기</a></li>
+						<li class=""><a href="/course/literacy">초등 문해력</a></li>
+						<li class=""><a href="/course/numeracy">초등 수해력</a></li>
+						<li class=""><a href="/course/popularCourse?schType=week&amp;menuClsfnId=25000267&amp;menuPClsfnId=25000267">인기강좌 순위</a></li>
+						<li class=""><a href="/book/main/index?menuClsfnId=25000394&amp;menuPClsfnId=25000393">교재</a></li>
+						<li class=""><a href="/book/issue?html=bookBoard&amp;menuClsfnId=25000395&amp;menuPClsfnId=25000393">방송계획</a></li>
+						<li class=""><a href="/book/mp3/index">교재 MP3 다운</a> <!-- 2022-12-22 추가 -->
+						</li><li class=""><a href="/teacher/primary/index">우리선생님</a></li>
+						<li class=""><a href="/course/level/index">수준별 맞춤 학습</a></li>
+						<li class=""><a href="/customer/mentoring/main">EBS 학습멘토링</a></li>
+					</ul>
+				</div>
+			</div>
+
+
+			<script type="text/javascript">
+				function newCheckLoginMyRooom() {
+					var flagLogin = isLogin();
+					if (flagLogin) {
+						location.href = "https://primary.ebs.co.kr/mypage/index";
+					} else {
+						if (confirm("로그인 후 이용하실 수 있습니다.")) {
+							LoginFocus("https://primary.ebs.co.kr/mypage/index");
+						}
+					}
+				}
+
+				function checkMobileUrl(mobileUrl, homepageUrl) {
+					var flag = isMobile();
+					if (flag) {
+						location.href = "http://" + mobileUrl;
+					} else {
+						location.href = homepageUrl;
+					}
+				}
+
+				function isMobile() {
+					var flag = false;
+					if (false) {
+						flag = true;
+					}
+					return flag;
+				}
+
+				function login_check_auth() {
+					if (isLogin()) {
+						$("#userSecessionFrm").children("input[name=returnUrl]").val(location.href);
+						$("#userSecessionFrm").submit();
+					}
+					else {
+						if (confirm("로그인 후 이용하실 수 있습니다.")) {
+							LoginFocus(location.href);
+						}
+					}
+				}
+			</script>
+			<script type="text/javascript">
+				function redirectSsoForm(type) {
+					if (_localMode() == 'Y') {
+						alert('서비스 일시 중지중입니다.\n긴급 네트워크 증설 및 보안 개선 작업으로 인해\n현재 신규 회원가입과 회원정보수정/탈퇴 기능이 잠시 중단됩니다.\n\n작업이 완료되는 즉시 서비스 될 수 있도록 하겠습니다.');
+						return;
+					} else {
+
+						LoginFocus();
+
+					}
+
+				}
+				// 화원 탈퇴
+				function secessionUer() {
+					if (_localMode() == 'Y') {
+						alert('서비스 일시 중지중입니다.\n긴급 네트워크 증설 및 보안 개선 작업으로 인해\n현재 신규 회원가입과 회원정보수정/탈퇴 기능이 잠시 중단됩니다.\n\n작업이 완료되는 즉시 서비스 될 수 있도록 하겠습니다.');
+						return;
+					} else {
+
+						LoginFocus();
+
+					}
+				}
+			</script>
+		</div>
+		<!-- // header end -->
+
+		<!-- contents_sub -->
+		<div id="contents_sub" class="">
+			<style>
+				@media all and (max-width:979px) {
+					.lnb_menu {
+						display: none
+					}
+				}
+
+				@media all and (max-height:830px) {
+					.lnb_menu {
+						top: 0px
+					}
+				}
+
+				@media all and (max-height:730px) {
+					.lnb_menu .inner h3 {
+						display: none
+					}
+				}
+			</style>
+			<script>
+				//모바일, 태블릿일 경우 LNB 제거
+				$(document).ready(function () {
+					var userAgent = navigator.userAgent.toLowerCase();
+
+					if (userAgent.indexOf("ipod") > -1 || userAgent.indexOf("iphone") > -1 || userAgent.indexOf("ipad") > -1 || userAgent.indexOf('android') > -1) {
+						$(".lnb_menu").remove();
+					} else {
+						$(".lnb_menu").show();
+					}
+
+				});
+			</script>
+
+			<!-- 2022-11-01 LNB -->
+			<div class="lnb_menu  on" style="display: none;">
+				<!-- 닫기버튼 -->
+				<button class="lnb_close  act"><span class="close">닫기</span><span class="open">열기</span></button>
+				<div class="inner">
+					<h3>강좌 바로가기</h3>
+					<div class="category">
+						<ul class="lnbmm">
+							<li class="promotion on">
+								<a href="https://primary.ebs.co.kr/course/numeracy?click=quick_left" style=""><span>초등
+										수해력</span></a>
+							</li>
+							<li class="promotion on">
+								<a href="https://primary.ebs.co.kr/course/literacy?click=quick_left" style=""><span>초등
+										문해력</span></a>
+							</li>
+							<li class="promotion on">
+								<a href="https://primary.ebs.co.kr/course/series/list?seriesId=S00053&click=quick_left"
+									style=""><span>만점왕</span></a>
+							</li>
+							<li class="promotion on">
+								<a href="https://primary.ebs.co.kr/customer/notice?click=quick_left&#basic/view/143/60000440137/0/1"
+									style=""><span>EBS ELT</span></a>
+							</li>
+							<li class="promotion on">
+								<a href="https://primary.ebs.co.kr/common/download/redirect?url=https://ebspeak.pagodatalkool.com/w/ebspeak/junior/main/page"
+									style="" target="_blank"><span>1:1 화상영어</span></a>
+							</li>
+							<li class="promotion on">
+								<a href="https://primary.ebs.co.kr/common/download/redirect?url=https://on.ebs.co.kr/main.ebs?EBSin_=EBSin_primary"
+									style="" target="_blank"><span>초등온</span></a>
+							</li>
+							<li class=" on">
+								<a href="javascript:;" class="grade_lecture" style=""><span>학년별 강좌 보기</span></a>
+								<ul style="display:block;">
+									<li class=" on">
+									<li><a href="https://primary.ebs.co.kr/course/grade/list?viewType=&studyPhaseCode=&sort=4&tab=1s&orderClsfsSysId=21000008&searchKeyword=&click=quick_left"
+											style="">1학년</a></li>
+
+							</li>
+							<li class=" on">
+							<li><a href="https://primary.ebs.co.kr/course/grade/list?viewType=&studyPhaseCode=&sort=4&tab=2s&orderClsfsSysId=21000008&searchKeyword=&click=quick_left"
+									style="">2학년</a></li>
+
+							</li>
+							<li class=" on">
+							<li><a href="https://primary.ebs.co.kr/course/grade/list?viewType=&studyPhaseCode=&sort=4&tab=3s&orderClsfsSysId=21000008&searchKeyword=&click=quick_left"
+									style="">3학년</a></li>
+
+							</li>
+							<li class=" on">
+							<li><a href="https://primary.ebs.co.kr/course/grade/list?viewType=&studyPhaseCode=&sort=4&tab=4s&orderClsfsSysId=21000008&searchKeyword=&click=quick_left"
+									style="">4학년</a></li>
+
+							</li>
+							<li class=" on">
+							<li><a href="https://primary.ebs.co.kr/course/grade/list?viewType=&studyPhaseCode=&sort=4&tab=5s&orderClsfsSysId=21000008&searchKeyword=&click=quick_left"
+									style="">5학년</a></li>
+
+							</li>
+							<li class=" on">
+							<li><a href="https://primary.ebs.co.kr/course/grade/list?viewType=&studyPhaseCode=&sort=4&tab=6s&orderClsfsSysId=21000008&searchKeyword=&click=quick_left"
+									style="">6학년</a></li>
+
+							</li>
+							<li class=" on">
+							<li><a href="https://mid.ebs.co.kr/course/series/list?seriesId=S00067" style=""
+									target="_blank">예비중1</a></li>
+
+						</ul>
+
+						</li>
+						<li class=" on">
+							<a href="https://primary.ebs.co.kr/course/series/list?seriesId=main&click=quick_left"
+								style=""><span>시리즈별 강좌 보기</span></a>
+						</li>
+						<li class=" on">
+							<a href="https://primary.ebs.co.kr/course/popularCourse?schType=week&click=quick_left"
+								style=""><span>인기 강좌 순위</span></a>
+						</li>
+						<li class=" on">
+							<a href="https://primary.ebs.co.kr/book/main/index?mobileType=Y&bnnrMngId=&seriesId=&studyTargetCode=all&studySubjectCode=all&click=quick_left"
+								style=""><span>교재 로드맵</span></a>
+						</li>
+						<li class=" on">
+							<a href="https://primary.ebs.co.kr/book/issue?html=bookBoard&grade=p6&dt=2&seriesid=null&click=quick_left"
+								style=""><span>교재 방송계획</span></a>
+						</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- // 2022-11-01 LNB -->
+			<meta name="decorator" content="sub" />
+
+			<!-- 2025년 서브메인 리뉴얼 1차 : 강좌/교재 전체// -->
+			<div class="lectbook_main">
+				
+				<!-- 추천강좌/추천교재 슬라이드// -->	
+				<section class="section01">
+					
+					<div class="inner_box">
+						<!-- 학년별 추천강좌// -->
+						<div class="recomend_lecuture">
+							<h4>학년별 추천 강좌</h4>
+							<!-- 탭// -->
+							<div class="tab_green">
+								<ul>
+									<li><a href="#none" class="on">1학년</a></li>
+									<li><a href="javascript:alert('개발요청사항 > 기존로직동일')" >2학년</a></li>
+									<li><a href="javascript:alert('개발요청사항 > 기존로직동일')">3학년</a></li>
+									<li><a href="javascript:alert('개발요청사항 > 기존로직동일')">4학년</a></li>
+									<li><a href="javascript:alert('개발요청사항 > 기존로직동일')">5학년</a></li>
+									<li><a href="javascript:alert('개발요청사항 > 기존로직동일')">6학년</a></li>
+								</ul>
+							</div>
+							<!-- //탭 -->
+							<!-- 추천강좌 슬라이드// -->
+							<div class="cnt_lecture_box">
+								<div class="swiper_box">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide new"><!-- new딱지가있는경우 new 클래스추가 -->
+											<a href="/">
+												<img src="https://cbox.ebs.co.kr/course/2023/1/4/100004440/55858080132323974_course.png" alt="">
+												<p class="txt">
+													<!-- 과목 클래스는 기존 강좌교재메인과 동일하게 사용해주세요 -->
+													<span class="icon_lecture_04">사회</span>
+													<span class="icon_lecture_11">22 개정</span>
+													<span class="teacher"><em>이선희</em> 선생님</span>
+													<strong>만점왕 수학 플러스 6-1 (2024)</strong>
+												</p>
+											</a>
+										</div>
+										<div class="swiper-slide">
+											<a href="/">
+												<img src="https://cbox.ebs.co.kr/course/2023/1/4/100004438/55858957125176970_course.png" alt="">
+												<p class="txt">
+													<span class="icon_lecture_06">과학</span>
+													<span class="icon_lecture_11">22 개정</span>
+													<span class="teacher"><em>Kristen Cho</em> 선생님</span>
+													<strong>만점왕 과학 6-1 (2025)</strong>
+												</p>
+											</a>
+										</div>
+										<div class="swiper-slide">
+											<a href="/">
+												<img src="https://cbox.ebs.co.kr/course/2023/1/4/100004441/55858101261709632_course.png" alt="">
+												<p class="txt">
+													<span class="icon_lecture_03">수학</span>
+													<span class="teacher"><em>이선희</em> 선생님</span>
+													<strong>만점왕 수학 6-1 (2025)</strong>
+												</p>
+											</a>
+										</div>
+										<div class="swiper-slide new"><!-- new딱지가있는경우 new 클래스추가 -->
+											<a href="/">
+												<img src="https://cbox.ebs.co.kr/course/2023/1/4/100004441/55858101261709632_course.png" alt="">
+												<p class="txt">
+													<span class="icon_lecture_03">수학</span>
+													<span class="teacher"><em>박용준</em> 선생님</span>
+													<strong>만점왕 수학 6-1 (2025)</strong>
+												</p>
+											</a>
+										</div>
+										<div class="swiper-slide">
+											<a href="/">
+												<img src="https://cbox.ebs.co.kr/course/2023/1/4/100004441/55858101261709632_course.png" alt="">
+												<p class="txt">
+													<span class="icon_lecture_03">수학</span>
+													<span class="teacher"><em>박용준</em> 선생님</span>
+													<strong>만점왕 수학 6-1 (2025)</strong>
+												</p>
+											</a>
+										</div>
+										<div class="swiper-slide">
+											<a href="/">
+												<img src="https://cbox.ebs.co.kr/course/2023/1/4/100004441/55858101261709632_course.png" alt="">
+												<p class="txt">
+													<span class="icon_lecture_03">수학</span>
+													<span class="teacher"><em>박용준</em> 선생님</span>
+													<strong>만점왕 수학 6-1 (2025)</strong>
+												</p>
+											</a>
+										</div>
+										<div class="swiper-slide">
+											<a href="/">
+												<img src="https://cbox.ebs.co.kr/course/2023/1/4/100004441/55858101261709632_course.png" alt="">
+												<p class="txt">
+													<span class="icon_lecture_03">수학</span>
+													<span class="teacher"><em>박용준</em> 선생님</span>
+													<strong>만점왕 수학 6-1 (2025)</strong>
+												</p>
+											</a>
+										</div>
+										<div class="swiper-slide">
+											<a href="/">
+												<img src="https://cbox.ebs.co.kr/course/2023/1/4/100004441/55858101261709632_course.png" alt="">
+												<p class="txt">
+													<span class="icon_lecture_03">수학</span>
+													<span class="teacher"><em>박용준</em> 선생님</span>
+													<strong>만점왕 수학 6-1 (2025)</strong>
+												</p>
+											</a>
+										</div>
+										<div class="swiper-slide">
+											<a href="/">
+												<img src="https://cbox.ebs.co.kr/course/2023/1/4/100004441/55858101261709632_course.png" alt="">
+												<p class="txt">
+													<span class="icon_lecture_03">수학</span>
+													<span class="teacher"><em>박용준</em> 선생님</span>
+													<strong>만점왕 수학 6-1 (2025)</strong>
+												</p>
+											</a>
+										</div>
+									</div>
+									<div class="btn_prev"><button>prev</button></div>
+									<div class="btn_next"><button>next</button></div>
+								</div>
+								<a href="javascript:alert('전체보기 학년별 링크 연결 , 개발')" class="more"><span class="alt_hidden">1학년</span>전체보기</a>
+							</div>
+							<!-- //추천강좌 슬라이드 -->
+						</div>
+						<!-- //학년별 추천강좌 -->
+
+						<!-- 학년별 추천교재// -->
+						<div class="recomend_book">
+							<h4>학년별 추천 교재</h4>
+							<!-- 탭// -->
+							<div class="tab_green">
+								<ul>
+									<li><a href="#none" class="on">1학년</a></li>
+									<li><a href="javascript:alert('개발요청사항 > 기존로직동일')" >2학년</a></li>
+									<li><a href="javascript:alert('개발요청사항 > 기존로직동일')">3학년</a></li>
+									<li><a href="javascript:alert('개발요청사항 > 기존로직동일')">4학년</a></li>
+									<li><a href="javascript:alert('개발요청사항 > 기존로직동일')">5학년</a></li>
+									<li><a href="javascript:alert('개발요청사항 > 기존로직동일')">6학년</a></li>
+								</ul>
+							</div>
+							<!-- //탭 -->
+							<!-- 추천교재 슬라이드// -->
+							<div class="cnt_book_box">
+								<div class="swiper_box">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<a href="/">
+												<p class="book ebook"><!-- ebook딱지가있는경우 ebook 클래스추가 -->
+													<img src="https://cbox.ebs.co.kr/textbook/2025/1/15/TB1000012122/119954914821049792_textbook.jpg" alt="">
+												</p>
+												<strong>신입생 예비과정 국어</strong>
+											</a>
+										</div>
+										<div class="swiper-slide">
+											<a href="/">
+												<p class="book ebook"><!-- ebook딱지가있는경우 ebook 클래스추가 -->
+													<img src="https://cbox.ebs.co.kr/textbook/2025/1/13/TB1000012117/119796245105749125_textbook.png" alt="">
+												</p>
+												<strong>만점왕 국어 1-1 (2025)</strong>
+											</a>
+										</div>
+										<div class="swiper-slide">
+											<a href="/">
+												<p class="book ebook"><!-- ebook딱지가있는경우 ebook 클래스추가 -->
+													<img src="https://cbox.ebs.co.kr/textbook/2020/12/16/TB10019590/107675715184171145_textbook.jpg" alt="">
+												</p>
+												<strong>어휘가 독해다</strong>
+											</a>
+										</div>
+										<div class="swiper-slide">
+											<a href="/">
+												<p class="book">
+													<img src="https://cbox.ebs.co.kr/textbook/2025/1/13/TB1000012117/119796245105749125_textbook.png" alt="">
+												</p>
+												<strong>만점왕 국어 1-1 (2025) 만점왕 국어 1-1 (2025) </strong>
+											</a>
+										</div>
+										<div class="swiper-slide">
+											<a href="/">
+												<p class="book">
+													<img src="https://cbox.ebs.co.kr/textbook/2025/1/13/TB1000012117/119796245105749125_textbook.png" alt="">
+												</p>
+												<strong>만점왕 국어 1-1 (2025)</strong>
+											</a>
+										</div>
+										<div class="swiper-slide">
+											<a href="/">
+												<p class="book">
+													<img src="https://cbox.ebs.co.kr/textbook/2025/1/13/TB1000012117/119796245105749125_textbook.png" alt="">
+												</p>
+												<strong>만점왕 국어 1-1 (2025)</strong>
+											</a>
+										</div>
+										<div class="swiper-slide">
+											<a href="/">
+												<p class="book">
+													<img src="https://cbox.ebs.co.kr/textbook/2025/1/13/TB1000012117/119796245105749125_textbook.png" alt="">
+												</p>
+												<strong>만점왕 국어 1-1 (2025)</strong>
+											</a>
+										</div>
+										<div class="swiper-slide">
+											<a href="/">
+												<p class="book">
+													<img src="https://cbox.ebs.co.kr/textbook/2025/1/13/TB1000012117/119796245105749125_textbook.png" alt="">
+												</p>
+												<strong>만점왕 국어 1-1 (2025)</strong>
+											</a>
+										</div>
+									</div>
+									<div class="btn_prev"><button>prev</button></div>
+									<div class="btn_next"><button>next</button></div>
+								</div>
+								<a href="javascript:alert('전체보기 학년별 링크 연결 , 개발')" class="more"><span class="alt_hidden">1학년</span>전체보기</a>
+							</div>
+							<!-- //추천교재 슬라이드 -->
+						</div>
+						<!-- //학년별 추천교재 -->
+					</div>
+
+				</section>		
+				<!-- // 추천강좌/추천교재 슬라이드-->	
+
+				<!-- 띠배너// -->
+				<section class="section02">	
+					<div class="inner_box">
+						<div class="line_bnr">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<a href="/">
+										<img src="images/primary/respond/submain/cre_line_bnr01.jpg" alt="EBS 문해력 시리즈 어휘가 문해력이다." class="pc"><!-- pc노출 -->
+										<img src="images/primary/respond/submain/cre_line_bnr01_m.jpg" alt="EBS 문해력 시리즈 어휘가 문해력이다." class="mobile"><!-- mobile 노출 -->
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a href="/">
+										<img src="images/primary/respond/submain/cre_line_bnr02.jpg" alt="EBS 문해력 시리즈 어휘가 문해력이다."  class="pc"><!-- pc노출 -->
+										<img src="images/primary/respond/submain/cre_line_bnr02_m.jpg" alt="EBS 문해력 시리즈 어휘가 문해력이다."  class="mobile"><!-- mobile 노출 -->
+									</a>
+								</div>
+							</div>
+							<div class="swiper-pagination"></div>
+						</div>
+					</div>
+				</section>
+				<!-- //띠배너 -->
+
+				<!-- 추천인기시리즈,EBS 교재서비스// -->
+				<section class="section03">
+					<div class="inner_box">
+						<!-- 추천 인기시리즈// -->
+						<div class="popular_bnr">
+							<h4>추천 인기 시리즈</h4>
+							<ul>
+								<li>
+									<a href="">
+										<img src="images/primary/respond/submain/lectbook_bnr0101.jpg" class="pc" alt=""><!-- pc + 태블릿 노출 -->
+										<img src="images/primary/respond/submain/lectbook_bnr0101_m.jpg" class="mobile" alt=""><!-- mobile 노출 -->
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<img src="images/primary/respond/submain/lectbook_bnr0102.jpg" class="pc" alt=""><!-- pc + 태블릿 노출 -->
+										<img src="images/primary/respond/submain/lectbook_bnr0102_m.jpg" class="mobile" alt=""><!-- mobile 노출 -->
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<img src="images/primary/respond/submain/lectbook_bnr0103.jpg" class="pc" alt="">
+										<img src="images/primary/respond/submain/lectbook_bnr0103_m.jpg" class="mobile" alt="">
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<img src="images/primary/respond/submain/lectbook_bnr0104.jpg" class="pc" alt="">
+										<img src="images/primary/respond/submain/lectbook_bnr0104_m.jpg" class="mobile" alt="">
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<img src="images/primary/respond/submain/lectbook_bnr0105.jpg" class="pc" alt="">
+										<img src="images/primary/respond/submain/lectbook_bnr0105_m.jpg" class="mobile" alt="">
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<img src="images/primary/respond/submain/lectbook_bnr0106.jpg" class="pc" alt="">
+										<img src="images/primary/respond/submain/lectbook_bnr0106_m.jpg" class="mobile" alt="">
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<img src="images/primary/respond/submain/lectbook_bnr0107.jpg" class="pc" alt="">
+										<img src="images/primary/respond/submain/lectbook_bnr0107_m.jpg" class="mobile" alt="">
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<img src="images/primary/respond/submain/lectbook_bnr0108.jpg" class="pc" alt="">
+										<img src="images/primary/respond/submain/lectbook_bnr0108_m.jpg" class="mobile" alt="">
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<img src="images/primary/respond/submain/lectbook_bnr0109.jpg" class="pc" alt="">
+										<img src="images/primary/respond/submain/lectbook_bnr0109_m.jpg" class="mobile" alt="">
+									</a>
+								</li>
+							</ul>
+						</div>
+						<!-- //추천 인기시리즈 -->
+						<!-- EBS 교재서비스// -->
+						<div class="book_service_bnr">
+							<h4>EBS 교재서비스</h4>
+							<ul>
+								<li>
+									<a href="">
+										<img src="images/primary/respond/submain/lectbook_bnr0201.jpg" class="pc" alt="">
+										<img src="images/primary/respond/submain/lectbook_bnr0201_m.jpg" class="mobile" alt="">
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<img src="images/primary/respond/submain/lectbook_bnr0202.jpg" class="pc" alt="">
+										<img src="images/primary/respond/submain/lectbook_bnr0202_m.jpg" class="mobile" alt="">
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<img src="images/primary/respond/submain/lectbook_bnr0203.jpg" class="pc" alt="">
+										<img src="images/primary/respond/submain/lectbook_bnr0203_m.jpg" class="mobile" alt="">
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<img src="images/primary/respond/submain/lectbook_bnr0204.jpg" class="pc" alt="">
+										<img src="images/primary/respond/submain/lectbook_bnr0204_m.jpg" class="mobile" alt="">
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<img src="images/primary/respond/submain/lectbook_bnr0205.jpg" class="pc" alt="">
+										<img src="images/primary/respond/submain/lectbook_bnr0205_m.jpg" class="mobile" alt="">
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<img src="images/primary/respond/submain/lectbook_bnr0206.jpg" class="pc" alt="">
+										<img src="images/primary/respond/submain/lectbook_bnr0206_m.jpg" class="mobile" alt="">
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<img src="images/primary/respond/submain/lectbook_bnr0207.jpg" class="pc" alt="">
+										<img src="images/primary/respond/submain/lectbook_bnr0207_m.jpg" class="mobile" alt="">
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<img src="images/primary/respond/submain/lectbook_bnr0208.jpg" class="pc" alt="">
+										<img src="images/primary/respond/submain/lectbook_bnr0208_m.jpg" class="mobile" alt="">
+									</a>
+								</li>
+							</ul>
+						</div>
+						<!-- //EBS 교재서비스 -->
+					</div>
+				</section> 
+				<!-- //추천인기시리즈,EBS 교재서비스 -->
+
+				<!-- 우리선생님// -->
+				<section class="section04">
+					<div class="inner_box">
+						<div class="myteacher_bnr">
+							<h4>우리선생님 Zip</h4>
+							<div class="tab_green">
+								<ul>
+									<li><a href="#none">국어</a></li>
+									<li><a href="#none">수학</a></li>
+									<li><a href="#none">사회</a></li>
+									<li><a href="#none">과학</a></li>
+									<li><a href="#none">영어</a></li>
+									<li><a href="#none">공통</a></li>
+								</ul>
+							</div>
+							<!-- 국어 -->
+							<div class="cnt_teacher_box">
+								<div class="swiper_box">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<a href="/">
+												<img src="https://cbox.ebs.co.kr/member/profile/images/2025/4/10/arona212000011.png" alt="">
+												<p><strong>김초등</strong>선생님</p>
+											</a>
+										</div>
+										<div class="swiper-slide">
+											<a href="/">
+												<img src="https://cbox.ebs.co.kr/member/profile/images/2025/4/10/arona212000011.png" alt="">
+												<p><strong>나초등</strong>선생님</p>
+											</a>
+										</div>
+										<div class="swiper-slide">
+											<a href="/">
+												<img src="https://cbox.ebs.co.kr/member/profile/images/2025/4/10/arona212000011.png" alt="">
+												<p><strong>박초등</strong>선생님</p>
+											</a>
+										</div>
+										<div class="swiper-slide">
+											<a href="/">
+												<img src="https://cbox.ebs.co.kr/member/profile/images/2025/4/10/arona212000011.png" alt="">
+												<p><strong>최초등</strong>선생님</p>
+											</a>
+										</div>
+										<div class="swiper-slide">
+											<a href="/">
+												<img src="https://cbox.ebs.co.kr/member/profile/images/2025/4/10/arona212000011.png" alt="">
+												<p><strong>조초등</strong>선생님</p>
+											</a>
+										</div>
+										<div class="swiper-slide">
+											<a href="/">
+												<img src="https://cbox.ebs.co.kr/member/profile/images/2025/4/10/arona212000011.png" alt="">
+												<p><strong>곽초등</strong>선생님</p>
+											</a>
+										</div>
+									</div>
+									<div class="btn_prev"><button>prev</button></div>
+									<div class="btn_next"><button>next</button></div>
+								</div>
+							</div>
+							<!-- 수학 -->
+							<div class="cnt_teacher_box">
+								수학 뿌려주세요. (swiper_box) : 탭 현재 랜덤노출중 개발시 sub_main.js > myteacherTab() 참고
+							</div>
+							<!-- 사회 -->
+							<div class="cnt_teacher_box">
+								사회 뿌려주세요. (swiper_box) : 탭 현재 랜덤노출중 개발시 sub_main.js > myteacherTab() 참고
+							</div>
+							<!-- 과학 -->
+							<div class="cnt_teacher_box">
+								과학 뿌려주세요. (swiper_box) : 탭 현재 랜덤노출중 개발시 sub_main.js > myteacherTab() 참고
+							</div>
+							<!-- 영어 -->
+							<div class="cnt_teacher_box">
+								영어 뿌려주세요. (swiper_box) : 탭 현재 랜덤노출중 개발시 sub_main.js > myteacherTab() 참고
+							</div>
+							<!-- 공통 -->
+							<div class="cnt_teacher_box">
+								공통 뿌려주세요. (swiper_box) : 탭 현재 랜덤노출중 개발시 sub_main.js > myteacherTab() 참고
+							</div>
+							<a href="https://primary.ebs.co.kr/teacher/primary/index" class="more">전체보기</a>
+						</div>
+					</div>
+				</section> 
+				<!-- //우리선생님 -->
+
+				<!-- 교재시리즈// -->
+				<section class="section05">
+					<div class="inner_box">
+						<div class="book_bnr">
+							<h4>교재시리즈</h4>
+							<div class="swiper_box">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<a href="/">
+											<img src="https://cbox.ebs.co.kr/course/2024/11/21/115228210134457003_series.png" alt="">
+										</a>
+									</div>
+									<div class="swiper-slide">
+										<a href="/">
+											<img src="https://cbox.ebs.co.kr/course/2020/12/16/107668786378264127_series.png" alt="">
+										</a>
+									</div>
+									<div class="swiper-slide">
+										<a href="/">
+											<img src="https://cbox.ebs.co.kr/course/2022/12/1/52903395981275288_series.png" alt="">
+										</a>
+									</div>
+								</div>
+								<div class="btn_prev"><button>prev</button></div>
+								<div class="btn_next"><button>next</button></div>
+							</div>
+						</div>
+					</div>
+				</section> 
+				<!-- //교재시리즈 -->
+
+				<!-- 서비스배너 전체// -->
+				<section class="section_bottom_bnr mob_hidden">
+					<div class="inner_box">
+						<!-- ad배너// -->
+						<div class="ad_bnr">
+							<!-- AD 배너영역 : 기존과 창의체험 메인과 동일하게붙여주세요. 이미지는 퍼블 시안확인을 위한 임시파일-->
+							<img src="images/primary/respond/submain/tmp_ad.jpg" alt="">
+						</div>
+						<!-- ad배너// -->
+						<!-- 서비스배너// -->
+						<div class="service_bnr">
+							<li>
+								<a href="https://primary.ebs.co.kr/course/popularCourse?schType=week&menuClsfnId=25000267&menuPClsfnId=25000267"><img src="images/primary/respond/submain/cre_service01.jpg" alt="인기강좌순위"></a>
+							</li>
+							<li>
+								<a href="https://primary.ebs.co.kr/space/tservice/certificationInfo"><img src="images/primary/respond/submain/cre_service02.jpg" alt="사이버학급"></a>
+							</li>
+							<li>
+								<a href="https://primary.ebs.co.kr/space/PTM?lowMenu=knowhow&menuClsfnId=25000075&menuPClsfnId=25000064#ptm_knowhow/list/131///1"><img src="images/primary/respond/submain/cre_service03.jpg" alt="나만의노하우"></a>
+							</li>
+							<li>
+								<a href="https://primary.ebs.co.kr/book/issue?html=bookBoard&menuClsfnId=25000395&menuPClsfnId=25000393"><img src="images/primary/respond/submain/cre_service04.jpg" alt="교재방송계획"></a>
+							</li>
+							<li>
+								<a href="https://primary.ebs.co.kr/parent/guide?page=child"><img src="images/primary/respond/submain/cre_service05.jpg" alt="학부모서비스"></a>
+							</li>
+							<li>
+								<a href="https://primary.ebs.co.kr/customer/frame?frameName=qna&menuClsfnId=25000206&menuPClsfnId=25000206"><img src="images/primary/respond/submain/cre_service06.jpg" alt="자주찾는질문"></a>
+							</li>
+						</div>
+						<!-- //서비스배너 -->
+					</div>
+					
+				</section>
+				<!-- //서비스배너 전체 -->
+			</div>
+			<!-- //2025년 서브메인 리뉴얼 1차 : 강좌/교재 전체 -->
+
+			<!-- 퀵배너 영역 START -->
+			<div class="quick_wrap">
+				<script type="text/javascript"src="https://primary.ebs.co.kr/js/middle/respond/commonMidQuick.js"></script>
+				<script type="text/javascript"
+					src="https://primary.ebs.co.kr/js/middle/respond/commonMidQuickRespond.js"></script>
+				<div id="quick_renewal">
+					<a href="javascript:;" onclick="openPle('primary','/pleasure/index?click=main_my2' );return false;"
+						class="quick-lectw">학습창</a>
+					<div class="quick_list_banner">
+						<ul>
+							<li>
+								<a href="#!"
+									onclick="openBannerMobile('primary', '', '16580','book.ebs.co.kr','Y');return false;">
+									<img src="https://cbox.ebs.co.kr/portal/banner/2025/1/3/promotionImg_118935490114689653.jpg"
+										alt="이북" title="이북" />
+								</a>
+							</li>
+							<li>
+								<a href="#!"
+									onclick="openBannerMobile('primary', '', '16579','on.ebs.co.kr','Y');return false;">
+									<img src="https://cbox.ebs.co.kr/portal/banner/2025/1/3/promotionImg_118935502382412874.jpg"
+										alt="초등 온" title="초등 온" />
+								</a>
+							</li>
+							<li>
+								<a href="#!"
+									onclick="openBannerMobile('primary', '', '16581','hottracks.kyobobook.co.kr/ht/evnExh/evnExhDetail/89378?LNK=EIG','Y');return false;">
+									<img src="https://cbox.ebs.co.kr/portal/banner/2025/1/3/promotionImg_118935495917270085.jpg"
+										alt="듄듄문고" title="듄듄문고" />
+								</a>
+							</li>
+							<li>
+								<a href="#!"
+									onclick="openBannerMobile('primary', '', '17397','primary.ebs.co.kr/course/primary/index#conts_17_series_1','N');return false;">
+									<img src="https://cbox.ebs.co.kr/portal/banner/2025/1/8/promotionImg_119347827894088311.jpg"
+										alt="초등 커릴큘럼 " title="초등 커릴큘럼 " />
+								</a>
+							</li>
+						</ul>
+					</div>
+					<p class="quick_p_banner">
+						<iframe title="퀵 배너" width="95" height="269"
+							src="https://primary.ebs.co.kr//ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=07Yi&out=iframe"
+							allowTransparency="true" marginwidth="0" marginheight="0" hspace="0" vspace="0"
+							frameborder="0" scrolling="no"></iframe>
+					</p>
+
+				</div>
+			</div>
+			<!-- // 퀵배너 영역 END -->
+		</div>
+		<!--// contents_sub -->
+
+	<div id="Footer">
+			<!-- 2021-11-18 ai챗봇 서비스 추가 -->
+			<style type="text/css">
+				.chatBot {
+					position: fixed;
+					overflow: inherit;
+					width: 400px;
+					height: 100%;
+					max-height: 750px;
+					border: 1px solid black;
+					min-width: 400px;
+					right: -50%;
+					display: none;
+					bottom: 10px;
+					transition: 1s;
+					animation: fade-in 0.5s;
+					z-index: 99999;
+				}
+
+				/*
+    .chatBot {position: fixed; overflow: inherit; width: 400px; height: 750px; border: 1px solid black; min-width: 400px; right: 0; bottom: 10px;  transition: 1s; animation: fade-in 0.5s;}
+    */
+				/* .chatBot_icon { position: fixed; width: 100px; height: 100px; bottom: 80px; right: 30px; cursor:pointer; z-index: 9800;} */
+				/* 21.12.22 주석 처리 */
+				.chatBot_icon {
+					position: fixed;
+					width: 80px;
+					height: 80px;
+					bottom: 80px;
+					right: 30px;
+					cursor: pointer;
+					z-index: 9800;
+				}
+
+				/* 21.12.22 신규 수정 */
+				.chatBot_message {
+					width: auto;
+					max-width: 100%;
+					cursor: pointer;
+					word-break: break-all;
+					position: fixed;
+					color: white;
+					text-align: left;
+					background-color: #816CFF;
+					padding: 10px;
+					border-radius: 15px 15px 0px 15px;
+					transition: 1s;
+					animation: fade-in 0.5s;
+					animation-fill-mode: forwards;
+					cursor: pointer;
+					transform: rotateY(90deg);
+					bottom: 80px;
+					right: 150px;
+					z-index: 9800;
+				}
+
+				@media screen and (max-width: 600px) and (hover: hover) {
+
+					/* html { overflow: hidden; } */
+					.chatBot {
+						width: 100%;
+						height: 100%;
+						min-width: 100%;
+						max-height: 100%;
+						margin: -12px;
+					}
+				}
+
+				@media screen and (max-width: 500px) and (hover: none) {
+
+					/* html { overflow: hidden; } */
+					.chatBot {
+						width: 100%;
+						height: 100%;
+						max-width: 100%;
+						max-height: 100%;
+						min-width: 100%;
+						border: 0px solid black;
+					}
+				}
+
+				@media screen and (max-width : 979px) {
+					.chatBot_icon {
+						width: 54px;
+						height: 54px;
+						bottom: 160px;
+					}
+
+					/* 2025-03-17  */
+					.chatBot_message {
+						right: 100px;
+					}
+				}
+
+				/* 2025-03-17 추가 */
+				@media screen and (max-width : 767px) {
+					.chatBot_icon {
+						bottom: 110px;
+						right: 5px;
+					}
+				}
+			</style>
+			<!-- //2021-11-18 ai챗봇 서비스 추가 -->
+			<script type="text/javascript">
+				//패밀리사이트 selectBox
+				function footer_link() {
+					if ($(".family_link_layer").css("display") == "none") {
+						$(".family_link_layer").show();
+					} else {
+						$(".family_link_layer").hide();
+					}
+				}
+
+				// 서버 현재시간 불러오기	
+				function getNowTime() {
+					return '202506240833';
+				}
+
+				$(document).ready(function () {
+					$(".btn_top_go").click(function () {
+						$('html, body').animate({
+							scrollTop: $("#header").offset().top
+						}, 1000);
+					});
+
+					/* IOS 심사 관련 */
+					if (navigator.userAgent.toLowerCase().indexOf("ipod") > -1
+						|| navigator.userAgent.toLowerCase().indexOf("iphone") > -1
+						|| navigator.userAgent.toLowerCase().indexOf("ipad") > -1) {
+						if (isImgVersionAppVer()) {
+							var rtnMap = isImgtechAppInfo();
+							if (rtnMap != null && rtnMap.deviceOs == 'iOS' && rtnMap.deviceAppver.replace(/\./g, '').substr(0, 3) >= '115') { //버전 변경 115
+								$(".banner_img").remove();
+							}
+						}
+					}
+				});
+
+			</script>
+
+			<!-- 2021-11-18 ai챗봇 서비스 추가 -->
+			<script type="text/javascript">
+				window.onload = function () {
+
+					var IorTemp = navigator.userAgent.toLowerCase();
+					if (IorTemp.indexOf("iphone") !== -1 || IorTemp.indexOf("ipad") !== -1 || IorTemp.indexOf("mac") !== -1) {
+						// iphone 일 때
+						var aiUserId = encodeURIComponent("");
+						var path = window.location.pathname;
+						window.document.getElementById("child-iframe").src = "https://aibot.ebs.co.kr/pri?usd=" + aiUserId + "&path=" + path;
+					} else {
+						var ifr = document.getElementById('child-iframe');
+						if (ifr) {
+							var aiUserId = encodeURIComponent("");
+							var path = window.location.pathname;
+							ifr.contentWindow.location.replace("https://aibot.ebs.co.kr/pri?usd=" + aiUserId + "&path=" + path);
+						}
+					}
+
+
+
+
+					$('.chatBot_icon').show();
+					//$('.chatBot_message').show();	<!-- 2025-03-18 비노출 -->
+
+				}
+
+				window.addEventListener('message', function (e) {
+					if (e.data === "closeChatBot") {
+						closeChatbot();
+					}
+
+					if (e.data === "webLogin") {
+						window.location.href = "//primary.ebs.co.kr/login/form";
+					}
+
+					if (e.data.messageMode) {
+						window.document.getElementById("chatBot_message").innerHTML = e.data.messageMode.text.value.replace("&lt;", "<").replace("&gt;", ">");
+						window.document.getElementById("chatBot_message").value = decodeURIComponent(e.data.messageMode.value.value);
+						window.document.getElementById("chatBot_message").style.transform = "rotateY(0deg)";
+
+						//window.document.getElementById("chatBot_message").style.display = 'block';	<!-- 2025-03-18 비노출 -->
+
+
+						setTimeout(function () {
+							//window.document.getElementById("chatBot_message").style.transform = "rotateY(90deg)";
+							window.document.getElementById("chatBot_message").style.display = 'none';
+							window.document.getElementById("chatBot_message").value = "";
+						}, 10000)
+					}
+				});
+
+				var closeChatbot = function () {
+					//window.document.getElementById("child-iframe").style.right = "-50%";
+					window.document.getElementById("child-iframe").style.display = "none";
+					//window.document.getElementById("chatBot_message").style.display = "";	<!-- 2025-03-18 비노출 -->
+					window.document.getElementById("chatBot_icon").style.display = "";
+					var html = window.document.getElementsByTagName("html");
+					html[0].style.overflow = "scroll";
+				}
+
+				var isMobile2 = navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/webOS/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/iPod/i) || navigator.userAgent.match(/BlackBerry/i) || navigator.userAgent.match(/Windows Phone/i) ? true : false;
+				var openChatbot = function () {
+					window.document.getElementById("chatBot_message").style.display = "none";
+					window.document.getElementById("child-iframe").style.right = "10px";
+					window.document.getElementById("chatBot_icon").style.display = "none";
+					window.document.getElementById("child-iframe").style.display = "block";
+					if (isMobile2) {
+						var html = window.document.getElementsByTagName("html");
+						html[0].style.overflow = "hidden";
+						var IorA = navigator.userAgent.toLowerCase();
+						if (IorA.indexOf("iphone") !== -1) {
+							// iphone 일 때
+							window.document.getElementById("child-iframe").style.right = "0px";
+							window.document.getElementById("child-iframe").style.top = "0px";
+						}
+					}
+				}
+				var meesageChatBot = function () {
+					if (window.document.getElementById("chatBot_message").value !== "") {
+						window.document.getElementById("child-iframe").src += "&in_str=" + window.document.getElementById("chatBot_message").value;
+					}
+					// openChatbot();
+				}
+				/*
+				const isMobile = navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/webOS/i) || navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/iPod/i) || navigator.userAgent.match(/BlackBerry/i) || navigator.userAgent.match(/Windows Phone/i) ? true : false;
+				const media = matchMedia("screen and (max-width: 500px)");
+				if(isMobile) {
+					media.addListener((a) => {
+						window.document.getElementById("child-iframe").style.width = "100%";
+						window.document.getElementById("child-iframe").style.height = "100%";
+						window.document.getElementById("child-iframe").style.maxWidth = "100%";
+						window.document.getElementById("child-iframe").style.maxHeight = "100%";
+						window.document.getElementById("child-iframe").style.minWidth = "100%";
+						window.document.getElementById("child-iframe").style.border = "0px solid black";
+						window.document.getElementsByTagName("html").style.overflowX = "none";
+					});
+				} 
+				*/
+
+				// 2022-06-17 Ai 스크립트 추가 요청
+				function respAppGetLogonUserSection(sOS, sAppObject, sParam, sUserInfo) {
+					setTimeout(function () {
+						if (sOS == "iOS") {
+							var bWebKit = false;
+							var bSchemeCall = true;
+							if (typeof (window[sAppObject]) != "undefined") {
+								bSchemeCall = false;
+								if (typeof (window[sAppObject].postMessage) != "undefined") {
+									bWebKit = true;
+								}
+							}
+
+							if (bSchemeCall) {
+								var sCommad = sAppObject + "://respAppGetLogonUserSection?param=" + encodeURIComponent(sParam) + "&value=" +
+									encodeURIComponent(sUserInfo);
+								window.document.location.href = sCommad;
+							} else {
+								if (bWebKit) {
+									var sCommad = sAppObject + "://respAppGetLogonUserSection?param=" + encodeURIComponent(sParam) + "&value=" +
+										encodeURIComponent(sUserInfo);
+									window[sAppObject].postMessage(sCommad)
+								} else {
+									window[sAppObject].onWebCommand("respAppGetLogonUserSection", sAppObject, sParam, sUserInfo, 0, 0, 0)
+								}
+							}
+						} else if (sOS == "android") {
+							window[sAppObject].onWebCommand("respAppGetLogonUserSection", sAppObject, sParam, sUserInfo, 0, 0, 0)
+						}
+					}, 1);
+				}
+
+				function reqWebGetLogonUserSection(sOS, sAppObject, sParam) {
+					var sUserInfo = encodeURIComponent("");
+					respAppGetLogonUserSection(sOS, sAppObject, sParam, sUserInfo);
+				}
+				// //2022-06-17 Ai 스크립트 추가 요청
+			</script>
+
+			<iframe id="child-iframe" class="chatBot" src="javascript:;" style="right:0; z-index:9999;"> </iframe>
+			<div class="chatBot_message" id="chatBot_message" onclick="meesageChatBot()" style="display:none;"></div>
+			<img class="chatBot_icon" id="chatBot_icon" src="https://ai.ebs.co.kr/pri_resource/image/img_molang_shadow.png" alt="" onclick="openChatbot()" style="display:none;">
+			<!-- //2021-11-18 ai챗봇 서비스 추가 -->
+			<div class="area_banner">
+				<ul>
+					<li><a href="https://www.ebs.co.kr?src=20131205" target="_blank"><img src="https://primary.ebs.co.kr/images/primary/index/footer_new_bn1_off.gif" alt="EBS" onmouseover="this.src=this.src.replace('_off.gif','.gif');" onmouseout="this.src=this.src.replace('.gif','_off.gif');"></a></li>
+					<li><a href="https://mid.ebs.co.kr?src=20131205" target="_blank"><img src="https://primary.ebs.co.kr/images/primary/index/footer_new_bn2_off.gif" alt="EBS 중학" onmouseover="this.src=this.src.replace('_off.gif','.gif');" onmouseout="this.src=this.src.replace('.gif','_off.gif');"></a></li>
+					<li><a href="https://www.ebsi.co.kr?src=20131205" target="_blank"><img src="https://primary.ebs.co.kr/images/primary/index/footer_new_bn9_off.gif" alt="EBSi" onmouseover="this.src=this.src.replace('_off.gif','.gif');" onmouseout="this.src=this.src.replace('.gif','_off.gif');"></a></li>
+					<li><a href="https://www.ebse.co.kr?src=20131205" target="_blank"><img src="https://primary.ebs.co.kr/images/primary/index/footer_new_bn4_off.gif" alt="EBS english" onmouseover="this.src=this.src.replace('_off.gif','.gif');" onmouseout="this.src=this.src.replace('.gif','_off.gif');"></a></li>
+					<li><a href="https://ebsmath.co.kr?src=20131205" target="_blank"><img src="https://primary.ebs.co.kr/images/primary/index/footer_new_bn3_off.gif" alt="EBS MATH" onmouseover="this.src=this.src.replace('_off.gif','.gif');" onmouseout="this.src=this.src.replace('.gif','_off.gif');"></a></li>
+					<li><a href="https://on.ebs.co.kr/main.ebs" target="_blank"><img src="https://primary.ebs.co.kr/images/primary/index/footer_new_bn5_off.gif" alt="EBSlang" onmouseover="this.src=this.src.replace('_off.gif','.gif');" onmouseout="this.src=this.src.replace('.gif','_off.gif');"></a></li>
+					<!-- 2023-04-26 -->
+					<!-- 		<li><a href="http://clipbank.ebs.co.kr/main?src=text&kw=000069&bottom"><img src="https://primary.ebs.co.kr/images/primary/index/footer_new_bn6_off.gif" alt="EBS 클립뱅크" onmouseover="this.src=this.src.replace('_off.gif','.gif');" onmouseout="this.src=this.src.replace('.gif','_off.gif');" /></a></li> -->
+					<li><a href="https://www.ebssw.kr" target="_blank"><img src="https://primary.ebs.co.kr/images/primary/index/footer_new_bn190306_off.gif" alt="이솦" onmouseover="this.src=this.src.replace('_off.gif','.gif');" onmouseout="this.src=this.src.replace('.gif','_off.gif');"></a></li>
+					<!-- 2018-10-15 추가및수정 -->
+					<li><a href="https://book.ebs.co.kr/" target="_blank"><img src="https://primary.ebs.co.kr/images/primary/index/footer_new_book_off.gif" alt="EBS 교재사이트" onmouseover="this.src=this.src.replace('_off.gif','.gif');" onmouseout="this.src=this.src.replace('.gif','_off.gif');"></a></li>
+					<!-- 2021-12-03 추가 -->
+				</ul>
+			</div>
+			<hr>
+			<div class="container">
+				<div id="policy" class="policy">
+					<ul>
+						<li><a href="https://about.ebs.co.kr/kor/main/index" target="_blank">EBS소개</a></li>
+						<li><a href="https://home.ebs.co.kr/copyright" target="_blank">저작권 침해 제보</a></li>
+						<li><a href="https://home.ebs.co.kr/green" target="_blank">EBS클린신고</a></li>
+						<li><a href="https://about.ebs.co.kr/kor/business/advertisement" target="_blank"><strong>광고문의</strong></a></li>
+						<li><a href="https://sso.ebs.co.kr/policy/termsInfo" target="_blank">이용약관</a></li>
+						<li class="dal"><a href="https://sso.ebs.co.kr/policy/privacy?fsdc=?fsdc=" target="_blank">개인정보처리방침</a></li><!--2021-04-15-->
+					</ul>
+				</div>
+				<hr>
+				<div class="area_link">
+					<div class="family_link">
+						<button type="button" title="FAMILY SITE" class="btn_family_link" onclick="footer_link();"><span class="blind">FAMILY SITE</span></button>
+						<ul class="family_link_layer" id="family_link_layer" style="display: none;">
+							<li><a title="EBS (메인)" href="https://www.ebs.co.kr" target="_blank">EBS (메인)</a></li>
+							<li><a title="EBS 초등" href="https://primary.ebs.co.kr" target="_blank">EBS 초등</a></li>
+							<li><a title="EBS 중학프리미엄" href="https://mid.ebs.co.kr" target="_blank">EBS 중학프리미엄</a></li>
+							<li><a title="EBSi (고교)" href="https://www.ebsi.co.kr" target="_blank">EBSi (고교)</a></li>
+							<li><a title="EBSe (영어)" href="https://www.ebse.co.kr" target="_blank">EBSe (영어)</a></li>
+							<li><a title="EBS MATH (수학)" href="https://www.ebsmath.co.kr" target="_blank">EBS MATH
+									(수학)</a></li>
+							<li><a title="EBS 초등ON" href="https://on.ebs.co.kr/main.ebs" target="_blank">EBS 초등ON</a>
+							</li><!-- 2023-04-26 -->
+							<li><a title="이솦 (소프트웨어)" href="https://www.ebssw.kr" target="_blank">이솦 (소프트웨어)</a></li>
+							<li><a title="EBS Book Story" href="https://book.ebs.co.kr" target="_blank">EBS Book
+									Story</a></li>
+							<li><a title="스페이스공감 (공연)" href="https://www.ebs.co.kr/space/main" target="_blank">스페이스공감
+									(공연)</a></li>
+							<li><a title="EIDF (다큐영화제)" href="http://www.eidf.org/kr" target="_blank">EIDF (다큐영화제)</a>
+							</li>
+							<li><a title="사회공헌 홈페이지" href="https://about.ebs.co.kr/kor/social/main" target="_blank">사회공헌
+									홈페이지</a></li>
+							<li><a title="EBS원격교육연수원" href="https://www.ettc.co.kr" target="_blank">EBS원격교육연수원</a></li>
+							<li><a title="EBS 전화/화상 외국어" href="https://www.ebslang.co.kr/speakingEng/main.ebs" target="_blank">EBS 전화/화상 외국어</a></li>
+							<li><a title="EBS 미디어" href="http://ebsmedia.kr" target="_blank">EBS 미디어</a></li>
+						</ul>
+					</div>
+					<div class="help"><a href="mailto:helpdesk@ebs.co.kr"><img src="https://primary.ebs.co.kr/images/primary/index/hepldesk.gif" alt="1588-1580 helpdesk@ebs.co.kr"></a></div>
+					<a href="http://www.0302.co.kr" target="_blank"><img src="https://primary.ebs.co.kr/images/primary/index/btn_remote.gif" alt="원격지원"></a>
+					<a href="https://primary.ebs.co.kr/customer/frame?frameName=faq&amp;menuClsfnId=25000207&amp;menuPClsfnId=25000207" target="_blank"><img src="https://primary.ebs.co.kr/images/primary/index/btn_faq.gif" alt="FAQ"></a>
+				</div>
+				<hr>
+				<div class="area_author">
+					<address>
+						<strong>10393</strong> 경기도 고양시 일산동구 한류월드로 281 한국교육방송공사 <span>사업자등록번호 : 229-82-01343 (한국교육방송공사사장
+							김유열)</span><br>
+						시청자불만전담 : <a href="mailto:helpdesk@ebs.co.kr">helpdesk@ebs.co.kr</a> <span>부가통신사업신고 : 10077
+							통신판매업신고 : 2017-고양일산동-1415 <a href="http://www.ftc.go.kr/bizCommPop.do?wrkr_no=2298201343" target="_blank">[사업자정보확인]</a></span><br>
+						<strong class="copyright">Copyright ⓒ EBS. All Rights Reserved.</strong>
+					</address>
+				</div>
+				<div class="bn_footer" style="text-align:center;">
+					<img src="https://primary.ebs.co.kr/images/common/img_footer_pims_2020.gif" alt="개인정보보호 관리체계 PIMS 인증" style="MARGIN-LEFT: 2px; width: 40%;" title="개인정보보호 관리체계 PIMS 인증">
+					<img src="https://primary.ebs.co.kr/images/common/img_footer_isms_txt_2025.gif" alt="[인증범위] EBS 교육 포털 웹서비스 [유효기간] 2025.04.16 ~ 2028.04.15" style="clear:both;display: block;margin-top: 2px;">
+				</div>
+			</div>
+
+			<!-- 태블릿, 모바일용 footer -->
+			<div class="m_footer">
+				<iframe id="child-iframe" class="chatBot" src="javascript:;" style="right:0; z-index:9999;"> </iframe>
+				<div class="chatBot_message" id="chatBot_message" onclick="meesageChatBot()" style="display:none;">
+				</div>
+				<img class="chatBot_icon" id="chatBot_icon" src="https://ai.ebs.co.kr/pri_resource/image/img_molang_shadow.png" alt="" onclick="openChatbot()" style="display:none;">
+				<div class="m_footer_sub">
+					<div class="sns">
+						<a href="javascript:;" class="kakaotalk" id="kakaotalk" onclick="mobShortUrlFn('kakaotalk', 'primary');"><img src="https://primary.ebs.co.kr/images/primary/respond/common/footer_sns_1.png" alt="카카오톡"></a>
+						<a href="javascript:;" class="twitter" id="twitter" onclick="mobShortUrlFn('twitter');"><img src="https://primary.ebs.co.kr/images/primary/respond/common/footer_sns_2.png" alt="트위터"></a>
+						<a href="javascript:;" class="facebook" id="facebook" onclick="mobShortUrlFn('facebook', 'primary');"><img src="https://primary.ebs.co.kr//images/primary/respond/common/footer_sns_3.png" alt="페이스북"></a>
+						<a href="javascript:;" class="classting" id="classting" onclick="mobShortUrlFn('classting');"><img src="https://primary.ebs.co.kr/images/primary/respond/common/footer_sns_4.png" alt="클래스팅"></a>
+						<!-- <a href="javascript:;" class="kakaoStory" id="kakaoStory" onclick="mobShortUrlFn('kakaoStory', 'primary');"><img src="/images/primary/respond/common/footer_sns_5.png" alt="카카오스토리"></a> -->
+						<a href="javascript:;" class="band" id="band" onclick="mobShortUrlFn('band');"><img src="https://primary.ebs.co.kr//images/primary/respond/common/footer_sns_6.png" alt="네이버밴드"></a>
+						<a href="javascript:;" class="naver" id="naver" onclick="mobShortUrlFn('naver');"><img src="https://primary.ebs.co.kr/images/primary/respond/common/footer_sns_7.png" alt="네이버"></a>
+					</div>
+					<nav>
+						<a href="https://primary.ebs.co.kr/customer/frame?frameName=faq&amp;menuClsfnId=25000207&amp;menuPClsfnId=25000207">FAQ</a>
+						<a href="https://primary.ebs.co.kr/customer/info/guide?page=joinStudentInfo&amp;menuClsfnId=25000345&amp;menuPClsfnId=25000208">이용안내</a>
+						<a href="javascript:;" onclick="LoginFocus(); return false;">로그인</a>
+					</nav>
+					<nav>
+						<a href="https://sso.ebs.co.kr/policy/termsInfo">이용약관</a>
+						<a href="https://sso.ebs.co.kr/policy/privacy?fsdc="><b>개인정보처리방침</b></a>
+						<a href="https://primary.ebs.co.kr/customer/primary/index">고객센터</a>
+						<!-- <a href="http://plus.kakao.com/home/hgyq7qwi" target="_blank" >카톡상담</a> -->
+						<a href="http://www.0302.co.kr" target="_blank" title="새창">원격지원</a>
+					</nav>
+					<p class="copy">ⓒ EBS <a href="tel:15881580"><img src="https://primary.ebs.co.kr/images/primary/respond/common/ico_footer_tel.png" alt="TEL" class="ico_tel">
+							1588-1580</a></p>
+				</div>
+				<!-- 2019-04-18 추가 -->
+				<div class="footer_m_licensee" style="display: block;">
+					<table cellpadding="0" cellspacing="0" summary="사장, 주소, 연락처 사업자등록번호, 통신 판매업 신고번호 정보 게시판">
+						<caption>사업자 정보</caption>
+						<colgroup>
+							<col width="40%">
+							<col width="*">
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row">사장</th>
+								<td>김유열</td>
+							</tr>
+							<tr>
+								<th scope="row">주소</th>
+								<td>
+									경기도 고양시 일산동구 한류월드로
+									281 (장항동 한국교육방송공사)
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">연락처</th>
+								<td>
+									<a href="tel:1588-1580" target="_blank">1588-1580</a>(대표전화/고객센터)<br>
+									<a href="mailto:helpdesk@ebs.co.kr" target="_blank">helpdesk@ebs.co.kr</a>
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">사업자등록번호</th>
+								<td>229-82-01343</td>
+							</tr>
+							<tr>
+								<th scope="row">통신 판매업 신고번호</th>
+								<td>2017-고양일산동-1415<br><a href="https://www.ftc.go.kr/bizCommPop.do?wrkr_no=2298201343" target="_blank">[사업자정보확인]</a></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<!-- // 2019-04-18 추가 -->
+			</div>
+			<a href="javascript:" id="btn_bottom_drawer"><img src="https://primary.ebs.co.kr/images/primary/respond/common/btn_bottom_drawer.png" alt="메뉴 전체보기"></a>
+			<a href="javascript:;" class="btn_top_go" style="z-index:1000;"><span>맨위로</span></a>
+			<div class="banner_img" style="background:#eee;width:100%;position: fixed;left: 0;bottom: 0;z-index: 9999;">
+				<script src="//ad.ad4989.co.kr/cgi-bin/PelicanC.dll?impr?pageid=07YM&amp;lang=UTF-8&amp;out=script"></script>
+			</div>
+			<!-- //태블릿, 모바일용 footer -->
+			<script type="text/javascript" src="/ZoneMediaPlayer/mediaplayer-3.1.53/js/mediaplayer-3.1.53.583.min.js?v=2025061901"></script>
+			<script type="text/javascript" src="/ZoneMediaPlayer/mediaplayer-3.1.53/skin/catvod/catvod.js?v=2025061901"></script>
+			<link type="text/css" rel="stylesheet" href="https://primary.ebs.co.kr/ZoneMediaPlayer/mediaplayer-3.1.53/skin/catvod/catvod.css?v=20241016">
+
+			<script type="text/javascript" src="/ZoneMediaPlayer/html5player/js/ZoneCrypto.min.js?v=2015090201"></script>
+			<script type="text/javascript">
+				var g_bCheeperType = 0;
+				var g_arVOD = new Array();
+
+				String.prototype.replaceAll = function (search, replace) {
+					if (!replace)
+						return this;
+					return this.replace(new RegExp('[' + search + ']', 'g'), replace);
+				};
+
+				function isNotEmpty(_str) {
+					obj = String(_str);
+					if (obj == null || obj == undefined || obj == 'null' || obj == 'undefined' || obj == '')
+						return false;
+					else
+						return true;
+				}
+
+				function isEmpty(_str) {
+					return !isNotEmpty(_str);
+				}
+
+				var g_vodUrl = "";
+				var g_courseImgSrc11 = "";
+				var g_indexStrartTime = 0;
+				var g_startPostionMoveYn = false;
+				var g_playtimer = null;
+
+				/**
+				 * player 시청시간 CHECK
+				 */
+				function checkPlayerViewTime() {
+
+					if (toast_playerObj) {
+						var currentTime = toast_playerObj.element.currentTime;
+						// 			console.log( currentTime );
+						if (!(currentTime >= g_indexStrartTime && currentTime <= (g_indexStrartTime + 300)) && currentTime != 0) {
+							toast_preview_close();
+						}
+					}
+				}
+
+				/**
+				 * HTML5Player 상태변경 이벤트 핸들러
+				 * @param 이벤트 상태 play, playing, end
+				 */
+				function OnChangePlayState(event) {
+					// console.log("toast_playerObj.eventType.CHANGE_PLAY_STATE");
+					// console.log( "///" + event.data.type );
+					if (event && event.data && event.data.type && event.data.type == "playing" && g_startPostionMoveYn) {
+						//toast_playerObj.currentTime = toast_playerObj.player.config.continuerTime;
+						g_playtimer = setInterval(checkPlayerViewTime, 1000);
+						g_startPostionMoveYn = false;
+					}
+				}
+
+				var toast_playerObj = null;
+				var playerDefaultCfg = {
+					debugMode: false,
+					continuerTime: 0,
+					controllers: {
+						timeSlider: true,
+						prevButton: true,
+						playButton: true,
+						osdPlayButton: true,
+						nextButton: true,
+						stopButton: true,
+						currentTime: true,
+						durationTime: true,
+						fullscreenButton: true,
+						expandButton: false,
+						playListButton: false,
+						languageButton: false,
+						subtitlesButton: false,
+						bookmarkButton: false,
+						volumeButton: true,
+						volumeSlider: true,
+						clear: false,
+						backwardButton: false,
+						currentSkip: false,
+						forwardButton: false,
+						speedDownButton: false,
+						currentSpeed: false,
+						speedUpButton: false,
+						favoriteButton: false,
+						repeatButton: false
+					},
+					domain: window.location.protocol + "//" + window.location.hostname,
+					sources: [{
+						src: g_arVOD[0]
+					}],
+					volumeSliderType: 1,
+					autoPlay: true,
+					controllersAutoHide: true,
+					useFlash: false,
+					useThumb: false
+				};
+
+				/**
+				 * toast make HTML
+				 */
+				function toast_makeHTML(p_data) {
+					// console.log( "## toast_makeHTML - START " );
+
+					g_vodUrl = p_data.vodUrl;
+
+					if (isNotEmpty(p_data.courseImgSrc11)) {
+						g_courseImgSrc11 = 'http://' + p_data.imagePath + p_data.courseImgSrc11;
+					}
+
+					var viewType = "type1";
+					var linkUrl = "/course/view?courseId=" + p_data.courseId;
+					var title = p_data.courseNm;
+					var thumbSrc = 'http://' + p_data.imagePath + p_data.courseImgSrc2;
+					var data_1 = p_data.teacherNm + " 선생님";
+					var data_2 = p_data.stdyPhsCdNm;
+					var data_3 = p_data.txbkNm || "교재없음";
+					var data_4 = p_data.courseFeat;
+					var data_5 = p_data.teacherNm + " 선생님";
+
+					// console.log( ">> g_indexStrartTime : " + g_indexStrartTime );
+					if (p_data.playType == "fivePreView") {
+						title = p_data.lectureNm;
+						data_1 = p_data.courseNm;
+						data_2 = p_data.lectureExp;
+						data_3 = p_data.lectureKwd;
+						if (isNotEmpty(p_data.lectureImage)) {
+							thumbSrc = 'http://' + p_data.imagePath + p_data.lectureImage;
+						}
+
+						g_startPostionMoveYn = true;
+						$(".toast_preview_layer_wrap." + viewType).find('.cont_wrap table th:eq(1)').text("강의설명");
+
+					} else if (p_data.playType == "indexPreView") {
+						title = p_data.indexNm;
+						data_1 = p_data.courseNm;
+						data_2 = p_data.lectureNm;
+						data_3 = p_data.indexKwd;
+
+						if (isNotEmpty(p_data.lectureImage)) {
+							thumbSrc = 'http://' + p_data.imagePath + p_data.lectureImage;
+						}
+						if (isNotEmpty(p_data.indexImage)) {
+							thumbSrc = 'http://' + p_data.imagePath + p_data.indexImage;
+						}
+
+						g_indexStrartTime = parseInt(p_data.indexStrartTime);
+						if (isNaN(g_indexStrartTime)) {
+							g_indexStrartTime = 0;
+						}
+
+						g_startPostionMoveYn = true;
+						$(".toast_preview_layer_wrap." + viewType).find('.cont_wrap table th:eq(1)').text("강의명");
+
+					} else if (p_data.playType == "clipPreView") {
+						title = p_data.clipNm;
+						data_1 = p_data.courseNm;
+						data_2 = p_data.lectureNm;
+						data_3 = p_data.clipKwd;
+
+						if (isNotEmpty(p_data.lectureImage)) {
+							thumbSrc = 'http://' + p_data.imagePath + p_data.lectureImage;
+						}
+						if (isNotEmpty(p_data.clipImage)) {
+							thumbSrc = 'http://' + p_data.imagePath + p_data.clipImage;
+						}
+
+						g_startPostionMoveYn = true;
+						$(".toast_preview_layer_wrap." + viewType).find('.cont_wrap table th:eq(1)').text("강의명");
+					} else {
+						// orientation, preView
+						viewType = "type2";
+						$(".toast_preview_layer_wrap." + viewType).find('.cont_wrap table td:eq(3) div').attr('title', data_4.replace(/<(\/)?([a-zA-Z]*)(\s[a-zA-Z]*=[^>]*)?(\s)*(\/)?>/ig, "")).html(data_4);
+					}
+
+					// console.log( "<< g_indexStrartTime : " + g_indexStrartTime );
+
+					var toastWrapObj = $(".toast_preview_layer_wrap." + viewType);
+					var toastWrapObjHeight = 270;
+					var toastWrapObjSpeed = 700;
+
+					if (p_data.courseId == '10015845') {
+						linkUrl = "#none";
+						$('.cont_wrap p.btn .btn_app').hide();
+						$('.cont_wrap p.btn .btn_view').hide();
+					}
+
+					$(toastWrapObj).find('.cont_wrap p.tit a').text(title).attr('title', title).attr('href', linkUrl);
+					$(toastWrapObj).find('.cont_wrap span.tch').text(data_5);
+					$(toastWrapObj).find('.cont_wrap a.thumb').attr('title', title).attr('href', linkUrl);
+					$(toastWrapObj).find('.cont_wrap a.thumb img').attr('src', thumbSrc).attr('alt', title);
+					$(toastWrapObj).find('.cont_wrap table td:eq(0) div').attr('title', data_1).html(data_1);
+					$(toastWrapObj).find('.cont_wrap table td:eq(1) div').attr('title', data_2).html(data_2);
+					$(toastWrapObj).find('.cont_wrap table td:eq(2) div').attr('title', data_3).html(data_3);
+
+					// 학습신청 버튼
+					var btn_appImgSrc = $('.cont_wrap p.btn .btn_app').find("img").attr("src");
+					if (p_data.enrolSteCd == '100' || p_data.enrolSteCd == '200' || p_data.enrolSteCd == '201') {
+						$(toastWrapObj).find('.cont_wrap p.btn .btn_app').unbind().click(function () {
+							checkLect(p_data.courseId);
+						}).find("img").attr("src", btn_appImgSrc.replace("btn_layer_app.png", "btn_layer_ing.png")).attr("alt", "학습중");
+					} else {
+						$(toastWrapObj).find('.cont_wrap p.btn .btn_app').unbind().click(function () {
+							goMyStudyRoomLayer(p_data.courseId, p_data.enrolSteCd, p_data.lectureId);
+						}).find("img").attr("src", btn_appImgSrc.replace("btn_layer_ing.png", "btn_layer_app.png")).attr("alt", "학습신청");
+					}
+
+					// 강좌보기 버튼
+					$('.cont_wrap p.btn .btn_view').attr('href', linkUrl);
+					//href 값 초기화
+					$('.cont_wrap p.btn .btn_app').attr('href', "javascript:;");
+
+					// 교재구입 버튼
+					if (isEmpty(p_data.isbn) && isEmpty(p_data.txbkPurchaseUrl)) {
+						$(toastWrapObj).find('.cont_wrap p.btn .btn_book').unbind().hide();
+					} else {
+						$(toastWrapObj).find('.cont_wrap p.btn .btn_book').unbind().click(function () {
+							buyBookUrl(p_data.isbn, p_data.courseId, p_data.txbkPurchaseUrl, '');
+						}).show();
+					}
+
+					// toast 레이어 노출
+					$(toastWrapObj).css({
+						"bottom": -(toastWrapObjHeight) + "px"
+					}).show().animate({
+						"bottom": "0"
+					}, toastWrapObjSpeed);
+
+					g_arVOD[0] = p_data.vodUrl;
+					GenKey();
+					if (typeof fn_preViewPlayer_close == "function") {
+						fn_preViewPlayer_close();
+					}
+
+					playerDefaultCfg.sources[0].src = g_arVOD[0];
+					playerDefaultCfg.continuerTime = g_indexStrartTime;
+
+					if (viewType == "type1") {
+						window.createNewVersionMediaPlayer('#playerDiv1', playerDefaultCfg);
+					} else {
+						window.createNewVersionMediaPlayer('#playerDiv2', playerDefaultCfg);
+					}
+
+					if (p_data.fivePreViewYN == 0 && p_data.previewYn == "Y") {
+						$(".lastrow .c_preview").html("<strong>5분간 미리보기 제공중입니다. </strong> <br> 미리보기 강의는 5분간만 제공되며 학습이력은 남지 않습니다. <br> 로그인 후 ʽ학습신청ʼ을 클릭하시면 전체강의 보기 및 학습이력이 관리 됩니다.");
+						g_playtimer = setInterval(checkViewTime, 1000);
+					} else {
+						$(".lastrow .c_preview").html("미리보기 강의는 학습이력이 남지 않습니다. <br> 로그인 후 ʽ학습신청ʼ을 클릭하시면 전체강의 보기 및 학습이력이 관리 됩니다.")
+					}
+
+					// console.log( "## toast_makeHTML - END " );
+				}
+
+				/**
+				 * player 시청시간 CHECK(NEW)
+				 */
+				function checkViewTime() {
+					var vTime = $('#playerDiv1 .mpv-currenttime-text').text();
+					vTime = vTime.split(":");
+					if (vTime[0] >= "05") {
+						toast_preview_close();
+						clearInterval(g_playtimer);
+					}
+				}
+
+				/**
+				 * toast 레이어 열기
+				 */
+				function toast_preview_open(p_obj) {
+					// console.log( "=============================== " );
+					// console.log( "## toast_preview_open - START " );
+
+					if (p_obj.flag == 2) {
+						p_obj.type = "fivePreView";
+					}
+
+					toast_preview_close(); // 초기화
+
+					// "강좌보기" 버튼 제외 (학습신청,교재구입 버튼 두개만 노출)
+					if (Boolean(p_obj.btnFlag)) {
+						$("#toast_preview_layer_wrap .cont_wrap .btn .btn_view").hide();
+					}
+
+					// console.log( "## toast_preview_open - ajax CALL " );
+
+					$.ajax({
+						type: 'POST',
+						url: '/course/toastPlayer',
+						data: {
+							'playType': p_obj.type,
+							'courseId': p_obj.courseId,
+							'lectureId': p_obj.lectureId,
+							'indexSno': p_obj.indexSno,
+							'clipId': p_obj.clipId
+						},
+						dataType: 'json',
+						success: function (data) {
+							if (data.result == "failure") {
+								alert(data.exceptionMessage);
+							} else {
+								if (isEmpty(data.vodUrl)) {
+									alert('강의가 탑재될 예정입니다.');
+									return false;
+								}
+
+								if (p_obj.handlerFunction && p_obj.handlerFunction == 'fn_preViewPlayer') {
+									fn_preViewPlayer(data);
+								} else {
+									// 기본 토스트 팝업 생성 함수 ( for SilverLight )
+									toast_makeHTML(data);
+								}
+							}
+						}
+					});
+
+					// console.log( "## toast_preview_open - END " );
+				}
+
+				/**
+				 * toast 레이어 닫기 ( 초기화 )
+				 */
+				function toast_preview_close() {
+
+					// console.log( "## toast_preview_close - START " );
+
+					clearInterval(g_playtimer);
+					$('.playerDiv').empty();
+					$(".toast_preview_layer_wrap .cont_wrap .btn a").show();
+					$(".toast_preview_layer_wrap").hide();
+
+					g_vodUrl = "";
+					g_courseImgSrc11 = 'http://primary.ebs.co.kr/images/primary/com/no_image_lecture.gif'; // AOD (mp3파일) 재생시에 썸네일 기본 경로
+					g_indexStrartTime = 0;
+					g_startPostionMoveYn = false;
+					g_playtimer = null;
+
+					// console.log( "## toast_preview_close - END " );
+				}
+
+				/**
+				 * 학습중 버튼 클릭시
+				 */
+				function checkLect(courseId, arg, lectId, enrolSiteDsCd) {
+
+
+					var studyFlag = getUserStudyFlag(courseId);
+					if (studyFlag == "Y") {
+						alert('해당 강좌는 8월 31일(수)까지만 EBS초등 사이트에서 수강 가능합니다.\nEBS중학 사이트에서 수강 가능하니 학습 시 참고하여 주세요.');
+					}
+
+
+					$.ajax({
+						headers: {
+							"Accept": "application/json"
+						},
+						type: 'POST',
+						url: '/course/getUserLect',
+						async: false,
+						dataType: 'json',
+						data: {
+							'courseId': courseId,
+							'enrolSiteDsCd': enrolSiteDsCd
+						},
+						success: function (obj, http, st) {
+							toast_preview_close();
+							if (obj.loginYn == 'Y') {
+								if (obj.lectureTypeCode == 'VOD' || obj.lectureTypeCode == 'AOD') {
+									obj.lectureId = (typeof lectId == "undefined" || lectId == "") ? obj.lectureId : lectId
+
+									if (obj.enrolSiteDsCd == 'PR') {
+										openPopupPleasurePlainPlayer('primary', courseId, obj.stepId, obj.lectureId, obj.enrollNo, obj.encodingTypeCode, 'webAquaplayer', null, obj.enrolSiteDsCd);
+									} else if (obj.enrolSiteDsCd == 'MS') {
+										openPopupPleasurePlainPlayer('primary', courseId, obj.stepId, obj.lectureId, obj.enrollNo, obj.encodingTypeCode, 'webAquaplayer', null, obj.enrolSiteDsCd);
+									} else if (obj.interfaceCd == '1004') {
+										openPopupPleasurePlayer('primary', courseId, obj.stepId, obj.lectureId, obj.enrollNo, obj.encodingTypeCode, 'pleasureplayer', null, obj.enrolSiteDsCd);
+									} else if (obj.interfaceCd == '1003') {
+										openPopupPleasurePlainPlayer('primary', courseId, obj.stepId, obj.lectureId, obj.enrollNo, obj.encodingTypeCode, 'webAquaplayer', null, obj.enrolSiteDsCd);
+									} else if (obj.interfaceCd == '1002') {
+										openPleSilverPlayer('primary', courseId, obj.stepId, obj.lectureId, obj.enrollNo, obj.encodingTypeCode, 'pleSilverLight', null, obj.enrolSiteDsCd);
+									} else {
+										openPleActivePlayer('primary', courseId, obj.stepId, obj.lectureId, obj.enrollNo, obj.encodingTypeCode, 'pleAquaplayer', null, obj.enrolSiteDsCd);
+									}
+
+								} else {
+									if (isNotEmpty(obj.contentsId) && isNotEmpty(obj.webLink)) {
+										if (courseId == '10001559') {
+											// 배움너머
+											location.href = '/course/view?courseId=' + courseId;
+										} else {
+
+											window.open(obj.webLink);
+
+										}
+									}
+								}
+
+								if (arg == 'reload') {
+									if (isEmpty(STATIC_HASH_URL)) {
+										location.reload();
+									} else if (STATIC_HASH_URL.length > 6) {
+										init_page(STATIC_HASH_URL.substr(1, STATIC_HASH_URL.length));
+									} else {
+										location.reload();
+									}
+								}
+
+							} else {
+								if (confirm('로그인 후 이용하실 수 있습니다.')) {
+									LoginFocus();
+								}
+							}
+
+						},
+						error: function (obj, http, st) {
+							alert('처리되지 못했습니다.');
+						}
+					});
+				}
+
+				/**
+				 * 수강 신청
+				 */
+				function goMyStudyRoomLayer(courseId, reenroll, lectId) {
+					lectId = (typeof lectId == "undefined") ? "" : lectId;
+
+					alert("로그인 후 이용하실 수 있습니다.");
+					var rtnUrl = location.protocol + "//" + location.hostname + location.pathname + location.search;
+					rtnUrl = (rtnUrl.indexOf("?") != -1) ? rtnUrl + "&mrpi=Y/" + lectId : rtnUrl + "?mrpi=Y/" + lectId;
+					rtnUrl = rtnUrl + location.hash;
+					LoginFocus(rtnUrl);
+					return false;
+
+
+					if (reenroll == '300') {
+						reenroll = true;
+					} else {
+						reenroll = false;
+					}
+
+					//스텝 아이디 리스트인지 확인
+					$.ajax({
+						url: "/course/pop/getStep",
+						type: 'POST',
+						async: false,
+						dataType: 'json',
+						data: {
+							"courseId": courseId
+						},
+						success: function (data) {
+							//학습방 담기
+							var msg = '';
+							var stepCount = data.stepList.length;
+
+							/* 폐강 예정 강좌는 다음 로직으로 변경한다.
+								confirm 예 > 신규 강좌 이동
+								confirm 아니오 > 구 강좌 학습방
+							*/
+							if ('10029028' == courseId
+								|| '10029029' == courseId
+								|| '10029030' == courseId
+								|| '10029031' == courseId
+								|| '10029032' == courseId
+								|| '10029033' == courseId
+								|| '10029034' == courseId
+								|| '10029035' == courseId
+								|| '10029095' == courseId
+								|| '10029096' == courseId
+								|| '10023793' == courseId
+								|| '10023794' == courseId) {
+								if (confirm('교육과정 개편 전 강좌입니다. 개편 후 강좌로 이동하시겠습니까?')) {
+									var newCoureseId;
+									if ('10029028' == courseId) newCoureseId = '10201480';
+									else if ('10029029' == courseId) newCoureseId = '10201481';
+									else if ('10029030' == courseId) newCoureseId = '10201482';
+									else if ('10029031' == courseId) newCoureseId = '10201483';
+									else if ('10029032' == courseId) newCoureseId = '10201484';
+									else if ('10029033' == courseId) newCoureseId = '10201485';
+									else if ('10029034' == courseId) newCoureseId = '10201486';
+									else if ('10029035' == courseId) newCoureseId = '10201487';
+									else if ('10029095' == courseId) newCoureseId = '10201620';
+									else if ('10029096' == courseId) newCoureseId = '10201621';
+									else if ('10023793' == courseId) newCoureseId = '10201505';
+									else if ('10023794' == courseId) newCoureseId = '10201506';
+									location.href = '/course/view?courseId=' + newCoureseId;
+								}
+								else {
+									toast_preview_close();
+									var stepId = data.stepList[0].stepId;
+									if (stepCount == 1) {
+										$.ajax({
+											url: "/course/step/add3",
+											type: 'POST',
+											async: false,
+											dataType: 'json',
+											data: {
+												"courseId": courseId,
+												"stepId": stepId
+											},
+											success: function (data) {
+												checkLect(courseId, 'reload', lectId);
+											},
+											error: function (obj, http) {
+												alert('처리되지 못했습니다.');
+											}
+										});
+									} else if (stepCount > 1) {
+										go_step(courseId);
+									}
+								}
+							}
+							else {
+								if (reenroll) {
+									msg = '수강이 완료된 강좌입니다.\n재수강하시겠습니까?';
+								} else {
+									msg = '학습방에 담으시겠습니까?';
+								}
+
+								if (confirm(msg)) {
+									toast_preview_close();
+									var stepId = data.stepList[0].stepId;
+									if (stepCount == 1) {
+										$.ajax({
+											url: "/course/step/add3",
+											type: 'POST',
+											async: false,
+											dataType: 'json',
+											data: {
+												"courseId": courseId,
+												"stepId": stepId
+											},
+											success: function (data) {
+												checkLect(courseId, 'reload', lectId);
+											},
+											error: function (obj, http) {
+												alert('처리되지 못했습니다.');
+											}
+										});
+									} else if (stepCount > 1) {
+										go_step(courseId);
+									}
+								}
+							}
+						},
+						error: function (obj, http) {
+							alert('처리되지 못했습니다.');
+						}
+					});
+				}
+
+				/**
+				 * 수강 신청 다중강좌 선택 팝업
+				 */
+				function go_step(courseId, pType) {
+					if (isEmpty(pType)) {
+						pType = "list";
+					}
+					window.open("/course/pop/step?type=" + pType + "&courseId=" + courseId, 'step', 'width=420,height=420');
+				}
+
+				/**
+				 * 교재 외부 페이지 이동
+				 */
+				function goRurl(isbn, courseId, returnUrl) {
+					var rUrl = returnUrl.replaceAll("&", "--");
+					//window.open( "/rest/course/outGate?isbn=" + isbn + "&courseId=" + courseId + "&returnUrl=" + rUrl );
+					location.href = "/rest/course/outGate?isbn=" + isbn + "&courseId=" + courseId + "&returnUrl=" + rUrl;
+				}
+			</script>
+			<div class="toast_preview_layer_wrap type1" id="toast_preview_layer_wrap" style="display: none;">
+				<div class="toast_preview_layer">
+					<div class="view_area" style="background-image: url('/images/middle/index/2014/videobackground.jpg');">
+						<div id="playerDiv1" class="playerDiv" style="width: 100%; height: 100%"></div>
+					</div>
+					<div class="cont_wrap">
+						<a href="#" onclick="toast_preview_close(); return false;" class="close"><img src="/images/primary/index/2014/over_layer_close.png" alt="닫기"></a>
+						<p class="tit" style="margin-right: 130px;width: 280px;">
+							<a href="javascript:;"><span style="display:none;">.</span></a>
+						</p>
+						<span class="tch" style="top: 14px; right: 40px; position: absolute;">EBS</span>
+						<a href="#" class="thumb"><img src="/images/primary/lecture/@lecture.jpg" alt="강좌 썸네일"></a>
+						<table summary="강좌 상세정보">
+							<caption>강좌 상세정보</caption>
+							<colgroup>
+								<col width="70">
+								<col width="246">
+							</colgroup>
+							<tbody>
+								<tr class="first">
+									<th scope="row">강좌명</th>
+									<td>
+										<div class="t_wrap"></div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">강의설명</th>
+									<td>
+										<div class="t_wrap"></div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">키워드</th>
+									<td>
+										<div class="t_wrap"></div>
+									</td>
+								</tr>
+								<tr class="lastrow">
+									<td colspan="2">
+										<div class="c_preview">
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<p class="btn">
+							<a href="javascript:;" class="btn_app"><img src="/images/primary/index/2014/btn_layer_app.png" alt="학습신청"></a>
+							<a href="javascript:;" class="btn_view"><img src="/images/primary/index/2014/btn_layer_view.png" alt="강좌보기"></a>
+							<a href="javascript:;" class="btn_book"><img src="/images/primary/index/2014/btn_layer_buy.png" alt="교재구입"></a>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="toast_preview_layer_wrap type2" id="toast_preview_layer_wrap" style="display: none;">
+				<div class="toast_preview_layer">
+					<div class="view_area" style="background-image: url('/images/middle/index/2014/videobackground.jpg');">
+						<div id="playerDiv2" class="playerDiv" style="width: 100%; height: 100%"></div>
+					</div>
+					<div class="cont_wrap">
+						<a href="#" onclick="toast_preview_close(); return false;" class="close"><img src="/images/primary/index/2014/over_layer_close.png" alt="닫기"></a>
+						<p class="tit">
+							<a href="#"><span style="display:none;">.</span></a>
+						</p>
+						<a href="#" class="thumb"><img src="/images/primary/lecture/@lecture.jpg" alt="강좌 썸네일"></a>
+						<table summary="강좌 상세정보">
+							<caption>강좌 상세정보</caption>
+							<colgroup>
+								<col width="70">
+								<col width="246">
+							</colgroup>
+							<tbody>
+								<tr class="first">
+									<th scope="row">선생님</th>
+									<td>
+										<div class="t_wrap"></div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">학습단계</th>
+									<td>
+										<div class="t_wrap"></div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">강의교재</th>
+									<td>
+										<div class="t_wrap"></div>
+									</td>
+								</tr>
+								<tr class="lastrow">
+									<th scope="row">강좌설명</th>
+									<td>
+										<div class="c_wrap"></div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<p class="btn">
+							<a href="javascript:;" class="btn_app"><img src="/images/primary/index/2014/btn_layer_app.png" alt="학습신청"></a>
+							<a href="javascript:;" class="btn_view"><img src="/images/primary/index/2014/btn_layer_view.png" alt="강좌보기"></a>
+							<a href="javascript:;" class="btn_book"><img src="/images/primary/index/2014/btn_layer_buy.png" alt="교재구입"></a>
+						</p>
+					</div>
+				</div>
+			</div>
+			<!-- 플로팅 배너 -->
+			<script type="text/javascript">
+				//쿠키 굽기 기능
+				function setCookieMainPage(name, value, expiredays) {
+					var todayDate = new Date();
+					todayDate.setDate(todayDate.getDate() + expiredays);
+					document.cookie = name + "=" + escape(value) + "; path=/; expires=" + todayDate.toGMTString() + ";";
+				}
+			</script><!-- COPYRIGHT (C) 1999-2013 NETHRU INC. ALL RIGHTS RESERVED. -->
+			<script type="text/javascript">
+				(function () {
+					var nl = document.createElement('script');
+					nl.type = 'text/javascript';
+					nl.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + window.location.hostname + '/js/weblogs/nethru/wlo.js';
+					var s = document.getElementsByTagName('script')[0];
+					s.parentNode.insertBefore(nl, s);
+					var done = false;
+					nl.onload = nl.onreadystatechange = function () {
+						if (!done && (!this.readyState || this.readyState === "loaded" || this.readyState === "complete")) {
+							done = true;
+							_n_sid = "primary.ebs.co.kr";
+							if (false) {
+								_n_sid = "m.primary.ebs.co.kr";
+							}
+							//_n_uid_cookie = "UID"; 
+							n_logging();
+							nl.onload = nl.onreadystatechange = null;
+						}
+					}
+				})();
+			</script>
+			<!-- WISELOG ONLINE TRACKING SCRIPT CODE END -->
+		</div>
+
+</body>
+
+</html>
